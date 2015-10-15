@@ -23,16 +23,18 @@ public class InputUtil
 	 * @author 35092 and 8744
 	 */
 	
-	public static int[] loadFile(String filename) throws NegativeValueException, IOException
+	public static int[] loadFile(String filename, int numberOfPlayers) throws IOException
 	{
         List<String> lines = Files.readAllLines(Paths.get(filename), Charset.defaultCharset());
+        
+        assert(lines.size() >= numberOfPlayers * 11);
+        
         int[] values = new int[lines.size()];
         
         for (int i = 0; i < lines.size(); i++) 
         {
         	values[i] = Integer.parseInt(lines.get(i).replace(",", ""));
-        	if(values[i] < 0)
-        		throw new NegativeValueException("The file given has a negative value.");
+        	assert(values[i] >= 0);
         }
             
 		return values;

@@ -20,16 +20,16 @@ public class PebbleGame
 		{
 			try
 			{
-            			//Create a scanner so we can read the command-line input
-            			Scanner scanner = new Scanner(System.in);
+				//Create a scanner so we can read the command-line input
+            	Scanner scanner = new Scanner(System.in);
         
-            			// Prompt for no.players
-            			System.out.print("Number of players? ");
+            	//Prompt for no.players
+            	System.out.print("Number of players? ");
         
-            			//Get their input as a integer
-            			int playernumber  = scanner.nextInt();
+            	//Get their input as a integer
+            	int playernumber  = scanner.nextInt();
             
-            			bError = false;
+            	bError = false;
 			}   
 			//If not integer input then error is display
 			catch (Exception e) 
