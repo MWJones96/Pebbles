@@ -34,7 +34,7 @@ public class InputUtil
         for (int i = 0; i < lines.size(); i++) 
         {
         	values[i] = Integer.parseInt(lines.get(i).replace(",", ""));
-        	assert(values[i] >= 0);
+        	assert(values[i] > 0);
         }
             
 		return values;
