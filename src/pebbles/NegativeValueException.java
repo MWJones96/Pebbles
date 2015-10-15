@@ -1,6 +1,6 @@
 package pebbles; 
 
-/* An exception that is thrown if there is a negative number
+/**An exception that is thrown if there is a negative number
  * in an input file.
  * 
  * @date 14/10/15 - 4:06PM

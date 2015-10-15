@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-/* A strictly utility class that handles parsing csv files and 
+/**A strictly utility class that handles parsing csv files and 
  * returning the contained values to the main PebbleGame class 
  * to be loaded into the bags.
  * 
