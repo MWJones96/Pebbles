@@ -5,15 +5,80 @@ import java.util.Scanner;
 /**The main PebbleGame class that handles all of the objects
  * and controls the flow of the game.
  * 
- * @date 15/10/15 - 1:48PM
+ * @date 14/10/15
  * @author 35092 and 8744
  */
 
 public class PebbleGame
 {
-	public static void main (String[] args)
+	private int m_numOfPlayers;
+	private BagPair[] m_bags = new BagPair[3];
+	
+	public Game(int numOfPlayers, int[] bag1, int[] bag2, int[] bag3)
 	{
-		System.out.println("Welcome to Pebble Game");
+		m_numOfPlayers = numOfPlayers;
+		
+		m_bags[0] = new BagPair(bag1);
+		m_bags[1] = new BagPair(bag2);
+		m_bags[2] = new BagPair(bag3);
+	}
+	
+	/**
+	 * 
+	 * 
+	 * 
+	 * @date 
+	 * @author 
+	 */
+	
+	public class Player extends Thread
+	{
+		public Player()
+		{}
+		
+		public void start()
+		{
+			
+		}
+	}
+	
+	public void play()
+	{
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args)
+	{
 		//Boolean condition that is loops through input till valid input is received
 		boolean bError = true;
 		while (bError) 
@@ -34,11 +99,21 @@ public class PebbleGame
 			//If not integer input then error is display
 			catch (Exception e) 
 			{
-				System.out.println("Numbers only");
+				System.out.println("Only integers accepted. Please try again.");
 			}
-			
+		
 		}
 		
+		bError = true;
+		
+		while(bError)
+		{
+			
+		}
+
+		
+		
+		new PebbleGame().play();
 	}
-	
+		
 }

@@ -10,7 +10,7 @@ import java.util.List;
  * returning the contained values to the main PebbleGame class 
  * to be loaded into the bags.
  * 
- * @date 14/10/15 - 4:02PM GMT
+ * @date 14/10/15
  * @author 35092 and 8744
  */
 
@@ -23,18 +23,20 @@ public class InputUtil
 	 * @author 35092 and 8744
 	 */
 	
-	public static int[] loadFile(String filename, int numberOfPlayers) throws IOException
+	public static int[] loadFile(String filename, int numberOfPlayers) throws IOException, NegativePebbleWeightException, InsufficientNumberOfPebblesException
 	{
         List<String> lines = Files.readAllLines(Paths.get(filename), Charset.defaultCharset());
         
-        assert(lines.size() >= numberOfPlayers * 11);
+        if(lines.size() < numberOfPlayers * 11)
+        	throw new InsufficientNumberOfPebblesException("Not enough pebbles for the number of pebbles given");
         
         int[] values = new int[lines.size()];
         
         for (int i = 0; i < lines.size(); i++) 
         {
         	values[i] = Integer.parseInt(lines.get(i).replace(",", ""));
-        	assert(values[i] > 0);
+        	if(values[i] <= 0)
+        		throw new NegativePebbleWeightException("File contains a negative integer.");
         }
             
 		return values;
