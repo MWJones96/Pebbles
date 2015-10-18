@@ -2,6 +2,7 @@ package pebbles;
 
 import java.io.IOException;
 import java.nio.file.InvalidPathException;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -15,34 +16,34 @@ import java.util.Scanner;
 public class PebbleGame
 {
 	private int m_numOfPlayers;
-	//private BagPair[] m_bags = new BagPair[3];
+	private Player[] p;
+	private BagPair[] m_bags;
 	
-	public PebbleGame(int numOfPlayers, int[] bag1, int[] bag2, int[] bag3)
+	public PebbleGame(int numOfPlayers, ArrayList<Integer> bag1, ArrayList<Integer> bag2, ArrayList<Integer> bag3)
 	{
 		m_numOfPlayers = numOfPlayers;
 		
-		System.out.println(numOfPlayers);
-		System.out.println(bag1);
-		System.out.println(bag2);
-		System.out.println(bag3);
+		p = new Player[numOfPlayers];
 		
-		//m_bags[0] = new BagPair(bag1);
-		//m_bags[1] = new BagPair(bag2);
-		//m_bags[2] = new BagPair(bag3);
+		m_bags = new BagPair[3];
+		m_bags[0] = new BagPair(bag1);
+		m_bags[1] = new BagPair(bag2);
+		m_bags[2] = new BagPair(bag3);
 	}
 	
-	/**
+	/**Nested class that controls the players of PebbleGame.
+	 * Acts as a thread.
 	 * 
-	 * 
-	 * 
-	 * @date 
-	 * @author 
+	 * @date 18/10/15
+	 * @author 35092 and 8744
 	 */
 	
 	public class Player extends Thread
 	{
 		public Player()
-		{}
+		{
+			
+		}
 		
 		public void start()
 		{
@@ -55,36 +56,6 @@ public class PebbleGame
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	public static void main(String[] args)
 	{	
 		//Create a scanner so we can read the command-line input
@@ -94,27 +65,13 @@ public class PebbleGame
     	int numberOfPlayers = 0;
     	
     	//Arrays that store the integer weights of the pebbles in the bags
-    	int[] bag1 = null;
-    	int[] bag2 = null;
-    	int[] bag3 = null;
+    	ArrayList<Integer> bag1 = null;
+    	ArrayList<Integer> bag2 = null;
+    	ArrayList<Integer> bag3 = null;
 		
 		//Boolean condition that is loops through input until valid input is received
 		boolean canContinue = false;
-		
-		boolean exitRequested = false;
-		
-		Thread isExitRequested = new Thread(new Runnable()
-		{
-
-			@Override
-			public void run() 
-			{
-				
-			}
 			
-			
-			
-		});		
 		System.out.println("Welcome to Pebble Game!");
 		
 		//Loops through until a valid input is given
@@ -153,7 +110,7 @@ public class PebbleGame
             	//Get their input as a integer
             	bag1 = InputUtil.loadFile(scanner.nextLine(), numberOfPlayers);
             
-            	bError = false;
+            	canContinue = true;
 			}   
 			//If not integer input then error is display
 			catch(IOException e)
@@ -174,24 +131,30 @@ public class PebbleGame
 			}
 		}
 		
-		bError = true;
+		canContinue = false;
 		
-		while(bError)
+		while(!canContinue)
 		{
 			try
 			{
+				scanner = new Scanner(System.in);
+				
             	//Prompt for no.players
             	System.out.print("Please enter the path for csv file 2: ");
         
             	//Get their input as a integer
             	bag2 = InputUtil.loadFile(scanner.nextLine(), numberOfPlayers);
             
-            	bError = false;
+            	canContinue = true;
 			}   
 			//If not integer input then error is display
 			catch(IOException e) 
 			{
 				System.out.println("Path name not valid. Please provide a valid path name.");
+			}
+			catch(InvalidPathException e) 
+			{
+				System.out.println("Path name not valid.");
 			}
 			catch(NegativePebbleWeightException e)
 			{
@@ -203,9 +166,9 @@ public class PebbleGame
 			}
 		}
 		
-		bError = true;
+		canContinue = false;
 		
-		while(bError)
+		while(!canContinue)
 		{
 			try
 			{
@@ -215,12 +178,16 @@ public class PebbleGame
             	//Get their input as a integer
             	bag3 = InputUtil.loadFile(scanner.nextLine(), numberOfPlayers);
             
-            	bError = false;
+            	canContinue = true;
 			}   
 			//If not integer input then error is display
 			catch(IOException e) 
 			{
 				System.out.println("Path name not valid. Please provide a valid path name.");
+			}
+			catch(InvalidPathException e) 
+			{
+				System.out.println("Path name not valid.");
 			}
 			catch(NegativePebbleWeightException e)
 			{
