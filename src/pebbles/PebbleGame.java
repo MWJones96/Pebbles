@@ -5,6 +5,8 @@ import java.nio.file.InvalidPathException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**The main PebbleGame class that handles all of the objects
  * and controls the flow of the game.
@@ -15,20 +17,20 @@ import java.util.Scanner;
 
 public class PebbleGame
 {
-	private int m_numOfPlayers;
+	private int numOfPlayers;
 	private Player[] p;
-	private BagPair[] m_bags;
+	private BagPair[] bags;
 	
 	public PebbleGame(int numOfPlayers, ArrayList<Integer> bag1, ArrayList<Integer> bag2, ArrayList<Integer> bag3)
 	{
-		m_numOfPlayers = numOfPlayers;
+		this.numOfPlayers = numOfPlayers;
 		
-		p = new Player[numOfPlayers];
+		this.p = new Player[numOfPlayers];
 		
-		m_bags = new BagPair[3];
-		m_bags[0] = new BagPair(bag1);
-		m_bags[1] = new BagPair(bag2);
-		m_bags[2] = new BagPair(bag3);
+		this.bags = new BagPair[3];
+		this.bags[0] = new BagPair(bag1);
+		this.bags[1] = new BagPair(bag2);
+		this.bags[2] = new BagPair(bag3);
 	}
 	
 	/**Nested class that controls the players of PebbleGame.
@@ -39,21 +41,29 @@ public class PebbleGame
 	 */
 	
 	public class Player extends Thread
-	{
+	{	
+		private ArrayList<Integer> hand;
+		
 		public Player()
 		{
-			
+			hand = new ArrayList<Integer>();
 		}
 		
-		public void start()
+		public void run()
 		{
 			
 		}
 	}
 	
 	public void play()
-	{
+	{	
+		ExecutorService s = Executors.newFixedThreadPool(numOfPlayers);
 		
+		for(int i = 0; i < numOfPlayers; i++)
+		{
+			p[i] = new Player();
+			s.execute(p[i]);
+		}
 	}
 	
 	public static void main(String[] args)
