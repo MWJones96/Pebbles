@@ -1,6 +1,8 @@
 package pebbles;
 
 import java.io.IOException;
+import java.nio.file.InvalidPathException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**The main PebbleGame class that handles all of the objects
@@ -86,45 +88,65 @@ public class PebbleGame
 	public static void main(String[] args)
 	{	
 		//Create a scanner so we can read the command-line input
-    	Scanner scanner = new Scanner(System.in);
+    	Scanner scanner = null;
     	
+    	//Integer that stores the number of players
     	int numberOfPlayers = 0;
     	
+    	//Arrays that store the integer weights of the pebbles in the bags
     	int[] bag1 = null;
     	int[] bag2 = null;
     	int[] bag3 = null;
 		
 		//Boolean condition that is loops through input until valid input is received
-		boolean bError = true;
+		boolean canContinue = false;
 		
+		boolean exitRequested = false;
+		
+		Thread isExitRequested = new Thread(new Runnable()
+		{
+
+			@Override
+			public void run() 
+			{
+				
+			}
+			
+			
+			
+		});		
 		System.out.println("Welcome to Pebble Game!");
 		
-		while (bError) 
+		//Loops through until a valid input is given
+		while(!canContinue) 
 		{
 			try
 			{
+				scanner = new Scanner(System.in);
             	//Prompt for no.players
             	System.out.print("Number of players? ");
         
             	//Get their input as a integer
             	numberOfPlayers  = scanner.nextInt();
             
-            	bError = false;
+            	canContinue = true;
 			}   
 			//If not integer input then error is display
-			catch (Exception e) 
+			catch(InputMismatchException e) 
 			{
 				System.out.println("Only integers accepted. Please try again.");
 			}
 		
 		}
 		
-		bError = true;
+		canContinue = false;
 		
-		while(bError)
+		while(!canContinue)
 		{
 			try
 			{
+				scanner = new Scanner(System.in);
+				
             	//Prompt for no.players
             	System.out.print("Please enter the path for csv file 1: ");
         
@@ -134,9 +156,13 @@ public class PebbleGame
             	bError = false;
 			}   
 			//If not integer input then error is display
-			catch(IOException e) 
+			catch(IOException e)
 			{
-				System.out.println("Path name not valid. Please provide a valid path name.");
+				System.out.println("Not a valid filename.");
+			}
+			catch(InvalidPathException e) 
+			{
+				System.out.println("Path name not valid.");
 			}
 			catch(NegativePebbleWeightException e)
 			{
