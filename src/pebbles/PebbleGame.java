@@ -51,7 +51,7 @@ public class PebbleGame
 		
 		public void run()
 		{
-			
+			System.out.println("Hi from " + Thread.currentThread().getName());
 		}
 	}
 	
@@ -69,7 +69,7 @@ public class PebbleGame
 	public static void main(String[] args)
 	{	
 		//Create a scanner so we can read the command-line input
-    	Scanner scanner = null;
+    	Scanner scanner = new Scanner(System.in);
     	
     	//Integer that stores the number of players
     	int numberOfPlayers = 0;
@@ -89,17 +89,26 @@ public class PebbleGame
 		{
 			try
 			{
-				scanner = new Scanner(System.in);
-            	//Prompt for no.players
+            	//Prompt for number of players
             	System.out.print("Number of players? ");
-        
-            	//Get their input as a integer
-            	numberOfPlayers  = scanner.nextInt();
+				
+				String input = scanner.nextLine();
+				
+				//Testing program exit condition
+				if(input.equals("X"))
+				{
+					System.out.println("Exiting...");
+					System.exit(0);
+				}
+				
+            	//Attempts to parse line to an integer
+				numberOfPlayers = Integer.parseInt(input);
             
+				//Valid input given; can move on
             	canContinue = true;
 			}   
 			//If not integer input then error is display
-			catch(InputMismatchException e) 
+			catch(NumberFormatException e) 
 			{
 				System.out.println("Only integers accepted. Please try again.");
 			}
@@ -112,28 +121,39 @@ public class PebbleGame
 		{
 			try
 			{
-				scanner = new Scanner(System.in);
 				
             	//Prompt for no.players
             	System.out.print("Please enter the path for csv file 1: ");
-        
-            	//Get their input as a integer
-            	bag1 = InputUtil.loadFile(scanner.nextLine(), numberOfPlayers);
+            	
+            	String input = scanner.nextLine();
+            	
+				if(input.equals("X"))
+				{
+					System.out.println("Exiting...");
+					System.exit(0);
+				}
+            	
+            	bag1 = InputUtil.loadFile(input, numberOfPlayers);
             
             	canContinue = true;
 			}   
-			//If not integer input then error is display
 			catch(IOException e)
 			{
-				System.out.println("Not a valid filename.");
+				System.out.println("Error loading file.");
 			}
 			catch(InvalidPathException e) 
 			{
 				System.out.println("Path name not valid.");
 			}
+			catch(NumberFormatException e)
+			{
+				System.out.println("File supplied does not exclusively contain integers.");
+			}
 			catch(NegativePebbleWeightException e)
 			{
-				System.out.println("File contains a negative integer.");
+				System.out.println("Warning: File contains negative value integer(s). Continue anyway? (Y/N): ");
+				if(scanner.nextLine().equals("Y"))
+					canContinue = true;
 			}
 			catch(InsufficientNumberOfPebblesException e)
 			{
@@ -147,28 +167,39 @@ public class PebbleGame
 		{
 			try
 			{
-				scanner = new Scanner(System.in);
 				
             	//Prompt for no.players
             	System.out.print("Please enter the path for csv file 2: ");
-        
-            	//Get their input as a integer
-            	bag2 = InputUtil.loadFile(scanner.nextLine(), numberOfPlayers);
+            	
+            	String input = scanner.nextLine();
+            	
+				if(input.equals("X"))
+				{
+					System.out.println("Exiting...");
+					System.exit(0);
+				}
+            	
+            	bag2 = InputUtil.loadFile(input, numberOfPlayers);
             
             	canContinue = true;
 			}   
-			//If not integer input then error is display
-			catch(IOException e) 
+			catch(IOException e)
 			{
-				System.out.println("Path name not valid. Please provide a valid path name.");
+				System.out.println("Error loading file.");
 			}
 			catch(InvalidPathException e) 
 			{
 				System.out.println("Path name not valid.");
 			}
+			catch(NumberFormatException e)
+			{
+				System.out.println("File supplied does not exclusively contain integers.");
+			}
 			catch(NegativePebbleWeightException e)
 			{
-				System.out.println("File contains a negative integer.");
+				System.out.println("Warning: File contains negative value integer(s). Continue anyway? (Y/N): ");
+				if(scanner.nextLine().equals("Y"))
+					canContinue = true;
 			}
 			catch(InsufficientNumberOfPebblesException e)
 			{
@@ -182,26 +213,39 @@ public class PebbleGame
 		{
 			try
 			{
+				
             	//Prompt for no.players
             	System.out.print("Please enter the path for csv file 3: ");
-        
-            	//Get their input as a integer
-            	bag3 = InputUtil.loadFile(scanner.nextLine(), numberOfPlayers);
+            	
+            	String input = scanner.nextLine();
+            	
+				if(input.equals("X"))
+				{
+					System.out.println("Exiting...");
+					System.exit(0);
+				}
+            	
+            	bag3 = InputUtil.loadFile(input, numberOfPlayers);
             
             	canContinue = true;
 			}   
-			//If not integer input then error is display
-			catch(IOException e) 
+			catch(IOException e)
 			{
-				System.out.println("Path name not valid. Please provide a valid path name.");
+				System.out.println("Error loading file.");
 			}
 			catch(InvalidPathException e) 
 			{
 				System.out.println("Path name not valid.");
 			}
+			catch(NumberFormatException e)
+			{
+				System.out.println("File supplied does not exclusively contain integers.");
+			}
 			catch(NegativePebbleWeightException e)
 			{
-				System.out.println("File contains a negative integer.");
+				System.out.println("Warning: File contains negative value integer(s). Continue anyway? (Y/N): ");
+				if(scanner.nextLine().equals("Y"))
+					canContinue = true;
 			}
 			catch(InsufficientNumberOfPebblesException e)
 			{
