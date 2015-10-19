@@ -1,26 +1,30 @@
 package pebbles;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.InvalidPathException;
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**The main PebbleGame class that handles all of the objects
  * and controls the flow of the game.
  * 
  * @date 14/10/15
- * @author 35092 and 8744
+ * @author Candidate numbers 35092 and 8744
  */
 
 public class PebbleGame
 {
+	private volatile boolean isFinished = false;
+	
 	private int numOfPlayers;
 	private Player[] p;
 	private BagPair[] bags;
+	
+	private BufferedWriter[] w = new BufferedWriter[numOfPlayers];
 	
 	public PebbleGame(int numOfPlayers, ArrayList<Integer> bag1, ArrayList<Integer> bag2, ArrayList<Integer> bag3)
 	{
@@ -38,7 +42,7 @@ public class PebbleGame
 	 * Acts as a thread.
 	 * 
 	 * @date 18/10/15
-	 * @author 35092 and 8744
+	 * @author Candidate numbers 35092 and 8744
 	 */
 	
 	public class Player extends Thread
@@ -52,12 +56,33 @@ public class PebbleGame
 		
 		public void run()
 		{
-			System.out.println("Hi from " + Thread.currentThread().getName());
+			while(!isFinished)
+			{
+				if(getSum() == 100)
+				{
+					isFinished = true;
+					notifyAll();
+				}
+				
+				discard();
+				
+				draw();
+				assert(hand.size() == 10);
+				
+				//Notifies the other threads that this thread has finished with its drawing and discarding
+				notifyAll();
+				try 
+				{
+					wait();
+				} 
+				catch (InterruptedException e) 
+				{}
+			}
+			
 		}
 		
 		public synchronized void draw()
 		{
-			AtomicInteger bagSelect = new AtomicInteger((int)(new Random() * 3));
 			
 			
 		}
@@ -66,7 +91,18 @@ public class PebbleGame
 		{
 			
 			
+		}
+		
+		private int getSum()
+		{
+			int sum = 0;
 			
+			for(int i = 0; i < hand.size(); i++)
+			{
+				sum += hand.get(i);
+			}
+			
+			return sum;
 		}
 	}
 	
@@ -76,9 +112,27 @@ public class PebbleGame
 		
 		for(int i = 0; i < numOfPlayers; i++)
 		{
+			try 
+			{
+				w[i] = new BufferedWriter(new FileWriter("player" + (i + 1) + "output.txt"));
+			} 
+			catch (IOException e) 
+			{
+				e.printStackTrace();
+			}
+			
 			p[i] = new Player();
+			
+			//Draw 10 pebbles for each player
+			for(int j = 0; j < 10; j++)
+				p[i].draw();
+			
 			s.execute(p[i]);
 		}
+		
+		System.out.println("Game over!");
+		
+		
 	}
 	
 	public static void main(String[] args)
