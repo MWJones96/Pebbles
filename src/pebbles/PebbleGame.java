@@ -89,8 +89,8 @@ public class PebbleGame
 		{
 			try
 			{
-            	//Prompt for number of players
-            	System.out.print("Number of players? ");
+            			//Prompt for number of players
+            			System.out.print("Number of players? ");
 				
 				String input = scanner.nextLine();
 				
@@ -101,11 +101,11 @@ public class PebbleGame
 					System.exit(0);
 				}
 				
-            	//Attempts to parse line to an integer
+            			//Attempts to parse line to an integer
 				numberOfPlayers = Integer.parseInt(input);
             
 				//Valid input given; can move on
-            	canContinue = true;
+            			canContinue = true;
 			}   
 			//If not integer input then error is display
 			catch(NumberFormatException e) 
@@ -122,10 +122,10 @@ public class PebbleGame
 			try
 			{
 				
-            	//Prompt for no.players
-            	System.out.print("Please enter the path for csv file 1: ");
+            			//Prompt for no.players
+            			System.out.print("Please enter the path for csv file 1: ");
             	
-            	String input = scanner.nextLine();
+            			String input = scanner.nextLine();
             	
 				if(input.equals("X"))
 				{
@@ -133,9 +133,9 @@ public class PebbleGame
 					System.exit(0);
 				}
             	
-            	bag1 = InputUtil.loadFile(input, numberOfPlayers);
+            			bag1 = InputUtil.loadFile(input, numberOfPlayers);
             
-            	canContinue = true;
+            			canContinue = true;
 			}   
 			catch(IOException e)
 			{
@@ -168,10 +168,10 @@ public class PebbleGame
 			try
 			{
 				
-            	//Prompt for no.players
-            	System.out.print("Please enter the path for csv file 2: ");
+            			//Prompt for no.players
+            			System.out.print("Please enter the path for csv file 2: ");
             	
-            	String input = scanner.nextLine();
+            			String input = scanner.nextLine();
             	
 				if(input.equals("X"))
 				{
@@ -179,9 +179,9 @@ public class PebbleGame
 					System.exit(0);
 				}
             	
-            	bag2 = InputUtil.loadFile(input, numberOfPlayers);
+            			bag2 = InputUtil.loadFile(input, numberOfPlayers);
             
-            	canContinue = true;
+            			canContinue = true;
 			}   
 			catch(IOException e)
 			{
@@ -214,10 +214,10 @@ public class PebbleGame
 			try
 			{
 				
-            	//Prompt for no.players
-            	System.out.print("Please enter the path for csv file 3: ");
-            	
-            	String input = scanner.nextLine();
+            			//Prompt for no.players
+            			System.out.print("Please enter the path for csv file 3: ");
+            			
+            			String input = scanner.nextLine();
             	
 				if(input.equals("X"))
 				{
@@ -225,9 +225,9 @@ public class PebbleGame
 					System.exit(0);
 				}
             	
-            	bag3 = InputUtil.loadFile(input, numberOfPlayers);
+            			bag3 = InputUtil.loadFile(input, numberOfPlayers);
             
-            	canContinue = true;
+            			canContinue = true;
 			}   
 			catch(IOException e)
 			{
