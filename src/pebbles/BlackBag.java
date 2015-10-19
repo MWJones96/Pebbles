@@ -1,6 +1,7 @@
 package pebbles;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class BlackBag extends Bag
 {
@@ -20,12 +21,12 @@ public class BlackBag extends Bag
 		w.getWeights().clear();
 	}
 	
-	public void transferOne(WhiteBag w)
+	public void transferOneToHand(ArrayList<Integer> hand)
 	{	
 		assert(this.getWeights().size() > 0);
 		
 		//Adds the last element of this Bag to Bag b
-		w.getWeights().add(this.getWeights().get(this.getWeights().size() - 1));
+		hand.add(this.getWeights().get(new Random().nextInt(this.getWeights().size())));
 		//Removes the last element from this Bag
 		this.getWeights().remove(this.getWeights().size() - 1);
 	}

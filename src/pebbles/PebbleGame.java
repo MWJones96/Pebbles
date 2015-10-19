@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.InvalidPathException;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -24,11 +25,12 @@ public class PebbleGame
 	private Player[] p;
 	private BagPair[] bags;
 	
-	private BufferedWriter[] w = new BufferedWriter[numOfPlayers];
+	private BufferedWriter[] w;
 	
 	public PebbleGame(int numOfPlayers, ArrayList<Integer> bag1, ArrayList<Integer> bag2, ArrayList<Integer> bag3)
 	{
 		this.numOfPlayers = numOfPlayers;
+		this.w = new BufferedWriter[numOfPlayers];
 		
 		this.p = new Player[numOfPlayers];
 		
@@ -58,38 +60,63 @@ public class PebbleGame
 		{
 			while(!isFinished)
 			{
+				assert(hand.size() == 10);
+				discard();
+				draw();
+				assert(hand.size() == 10);
+				System.out.println(Thread.currentThread().getName() + hand);
+				System.out.println(getSum());
+				
 				if(getSum() == 100)
 				{
 					isFinished = true;
-					notifyAll();
 				}
 				
-				discard();
-				
-				draw();
-				assert(hand.size() == 10);
-				
-				//Notifies the other threads that this thread has finished with its drawing and discarding
-				notifyAll();
-				try 
+				try
 				{
-					wait();
+					Thread.sleep(10);
 				} 
-				catch (InterruptedException e) 
-				{}
+				catch (InterruptedException e) {}
+				
 			}
 			
 		}
 		
 		public synchronized void draw()
 		{
+			int size = bags.length;
 			
+			int item = new Random().nextInt(size);
+			int i = 0;
+			for(Object obj : bags)
+			{
+			    if (i == item)
+			    {	    	
+			    	if(bags[i].getBlackBag().getWeights().size() == 0)
+			    		bags[i].getBlackBag().receiveAll(bags[i].getWhiteBag());
+			    	
+			    	bags[i].getBlackBag().transferOneToHand(hand);
+			    }
+			    
+			    i++;
+			}
 			
 		}
 		
 		public synchronized void discard()
 		{
-			
+			int size = bags.length;
+			int item = new Random().nextInt(size);
+			int i = 0;
+			for(Object obj : bags)
+			{
+			    if (i == item)
+			    {
+			    	bags[i].getWhiteBag().receiveOneFromHand(hand);
+			    }
+			    
+			    i++;
+			}
 			
 		}
 		
@@ -129,8 +156,6 @@ public class PebbleGame
 			
 			s.execute(p[i]);
 		}
-		
-		System.out.println("Game over!");
 		
 		
 	}
