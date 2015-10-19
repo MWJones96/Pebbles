@@ -15,7 +15,21 @@ import java.util.concurrent.Executors;
  * @date 14/10/15
  * @author Candidate numbers 35092 and 8744
  */
-
+public synchronized void draw()
+        {
+            
+            System.out.println(Thread.currentThread().getName() + " has drawn a " + bag[i].getBlackbag().transferOnetoHand(hand) + " from black bag " + bag[i] +
+            " " + Thread.currentThread().getName() + " hand is " + (hand.size() - 1));
+                 
+            
+        }
+        
+        public synchronized void discard()
+        {
+             System.out.println(Thread.currentThread().getName() + " has drawn a " + bag[i].getBlackbag().transferOnetoHand(hand) + " from white bag " + bag[i] 
+             + " " + Thread.currentThread().getName() + " hand is " + (hand.size() - 1));
+            
+        }
 public class PebbleGame
 {
 	private volatile boolean isFinished = false;
