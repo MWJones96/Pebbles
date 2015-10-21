@@ -16,7 +16,8 @@ import java.util.concurrent.Executors;
  * @date 14/10/15
  * @author Candidate numbers 35092 and 8744
  */
-public synchronized void draw()
+
+/*public synchronized void draw()
         {
             
             System.out.println(Thread.currentThread().getName() + " has drawn a " + bag[i].getBlackbag().transferOnetoHand(hand) + " from black bag " + bag[i] +
@@ -30,7 +31,8 @@ public synchronized void draw()
              System.out.println(Thread.currentThread().getName() + " has drawn a " + bag[i].getBlackbag().transferOnetoHand(hand) + " from white bag " + bag[i] 
              + " " + Thread.currentThread().getName() + " hand is " + (hand.size() - 1));
             
-        }
+        }*/
+
 public class PebbleGame
 {
 	private volatile boolean isFinished = false;
@@ -75,62 +77,58 @@ public class PebbleGame
 			while(!isFinished)
 			{
 				assert(hand.size() == 10);
-				discard();
-				draw();
-				assert(hand.size() == 10);
-				System.out.println(Thread.currentThread().getName() + hand);
-				System.out.println(getSum());
 				
-				if(getSum() == 100)
+				if(getSum() != 100)
 				{
-					isFinished = true;
+					discard();
+					draw();
+					assert(hand.size() == 10);
 				}
 				
-				try
+				else
 				{
-					Thread.sleep(10);
-				} 
-				catch (InterruptedException e) {}
+					isFinished = true;
+					notifyAll();
+					break;
+				}
+				
+				try 
+				{
+					//Notifies a waiting thread that it may draw and discard a pebble
+					notify();
+					//Makes the thread wait for others to draw
+					wait();
+				} catch (InterruptedException e){}
 				
 			}
+			
+			System.out.println("Game over!");
 			
 		}
 		
 		public synchronized void draw()
 		{
-			int size = bags.length;
+			//Picks a random black bag to draw from
+			int index = new Random().nextInt(3);
 			
-			int item = new Random().nextInt(size);
-			int i = 0;
-			for(Object obj : bags)
-			{
-			    if (i == item)
-			    {	    	
-			    	if(bags[i].getBlackBag().getWeights().size() == 0)
-			    		bags[i].getBlackBag().receiveAll(bags[i].getWhiteBag());
-			    	
-			    	bags[i].getBlackBag().transferOneToHand(hand);
-			    }
-			    
-			    i++;
-			}
+			//Keeps selecting an index until a non-empty bag is found
+			while(bags[index].getBlackBag().getWeights().size() != 0)
+				index = new Random().nextInt(3);
 			
+			hand.add(bags[index].pickUpPebble());
+			assert(hand.size() == 10);
 		}
 		
 		public synchronized void discard()
 		{
-			int size = bags.length;
-			int item = new Random().nextInt(size);
-			int i = 0;
-			for(Object obj : bags)
-			{
-			    if (i == item)
-			    {
-			    	bags[i].getWhiteBag().receiveOneFromHand(hand);
-			    }
-			    
-			    i++;
-			}
+			assert(hand.size() == 10);
+			
+			int index = new Random().nextInt(hand.size());
+			
+			
+			
+			
+			
 			
 		}
 		
@@ -155,12 +153,10 @@ public class PebbleGame
 		{
 			try 
 			{
+				//Instantiates the BufferedWriter to write to the appropriate player output file
 				w[i] = new BufferedWriter(new FileWriter("player" + (i + 1) + "output.txt"));
 			} 
-			catch (IOException e) 
-			{
-				e.printStackTrace();
-			}
+			catch (IOException e){}
 			
 			p[i] = new Player();
 			
@@ -286,9 +282,9 @@ public class PebbleGame
 					System.exit(0);
 				}
             	
-            			bag2 = InputUtil.loadFile(input, numberOfPlayers);
+            	bag2 = InputUtil.loadFile(input, numberOfPlayers);
             
-            			canContinue = true;
+            	canContinue = true;
 			}   
 			catch(IOException e)
 			{
