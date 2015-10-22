@@ -31,7 +31,7 @@ public class BagPair
 	 * @return the value of a randomly-chosen pebble
 	 */
 	
-	public int pickUpPebble()
+	public void pickUpPebble(ArrayList<Integer> hand)
 	{
 		//Gets a random index in the black bag
 		int index = new Random().nextInt(b.getWeights().size());
@@ -40,7 +40,7 @@ public class BagPair
 		//Removes the value from the bag
 		b.getWeights().remove(index);
 		//Returns the value
-		return temp;
+		hand.add(temp);
 	}
 	
 	/**Picks a random pebble from the player's hand and
@@ -51,10 +51,12 @@ public class BagPair
 	
 	public void putPebbleBack(ArrayList<Integer> hand)
 	{
+		assert(hand.size() == 10);
 		//Gets a random pebble index from the player's hand
 		int index = new Random().nextInt(hand.size());
 		//Puts the random pebble into the white bag
 		w.getWeights().add(hand.get(index));
+		hand.remove(index);
 	}
 	
 	/**Transfers the contents of the white to the black

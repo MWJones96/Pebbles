@@ -17,21 +17,6 @@ import java.util.concurrent.Executors;
  * @author Candidate numbers 35092 and 8744
  */
 
-/*public synchronized void draw()
-        {
-            
-            System.out.println(Thread.currentThread().getName() + " has drawn a " + bag[i].getBlackbag().transferOnetoHand(hand) + " from black bag " + bag[i] +
-            " " + Thread.currentThread().getName() + " hand is " + (hand.size() - 1));
-                 
-            
-        }
-        
-        public synchronized void discard()
-        {
-             System.out.println(Thread.currentThread().getName() + " has drawn a " + bag[i].getBlackbag().transferOnetoHand(hand) + " from white bag " + bag[i] 
-             + " " + Thread.currentThread().getName() + " hand is " + (hand.size() - 1));
-            
-        }*/
 
 public class PebbleGame
 {
@@ -66,70 +51,56 @@ public class PebbleGame
 	public class Player extends Thread
 	{	
 		private ArrayList<Integer> hand;
+		private int bagLastDrawnFrom;
+		private boolean playerTurn = true;
+		private boolean won = false;
 		
 		public Player()
 		{
 			hand = new ArrayList<Integer>();
 		}
 		
+		@Override
 		public void run()
 		{
-			while(!isFinished)
+			synchronized(this)
 			{
-				assert(hand.size() == 10);
-				
-				if(getSum() != 100)
+				while(!isFinished)
 				{
-					discard();
-					draw();
-					assert(hand.size() == 10);
+					discardAndDraw();
+					
+					if(getSum() == 100)
+						isFinished = true;
 				}
-				
-				else
-				{
-					isFinished = true;
-					notifyAll();
-					break;
-				}
-				
-				try 
-				{
-					//Notifies a waiting thread that it may draw and discard a pebble
-					notify();
-					//Makes the thread wait for others to draw
-					wait();
-				} catch (InterruptedException e){}
-				
 			}
 			
-			System.out.println("Game over!");
-			
+		}
+		
+		public synchronized void discardAndDraw()
+		{
+			assert(hand.size() == 10);
+			discard();
+			draw();
+			assert(hand.size() == 10);
 		}
 		
 		public synchronized void draw()
 		{
-			//Picks a random black bag to draw from
 			int index = new Random().nextInt(3);
 			
-			//Keeps selecting an index until a non-empty bag is found
-			while(bags[index].getBlackBag().getWeights().size() != 0)
+			while(bags[index].getBlackBag().getWeights().size() == 0)
+			{
+				bags[index].fillBlackBag();
 				index = new Random().nextInt(3);
+			}
 			
-			hand.add(bags[index].pickUpPebble());
-			assert(hand.size() == 10);
+			bags[index].pickUpPebble(hand);
+			setBagLastDrawnFrom(index);
 		}
 		
-		public synchronized void discard()
+		private synchronized void discard()
 		{
-			assert(hand.size() == 10);
-			
-			int index = new Random().nextInt(hand.size());
-			
-			bags[]
-			
-			
-			
-			
+			bags[bagLastDrawnFrom].putPebbleBack(hand);
 		}
 		
 		private int getSum()
@@ -143,6 +114,12 @@ public class PebbleGame
 			
 			return sum;
 		}
+		
+		public void setBagLastDrawnFrom(int index)
+		{
+			this.bagLastDrawnFrom = index;
+		}
+
 	}
 	
 	public void play()
@@ -160,13 +137,13 @@ public class PebbleGame
 			
 			p[i] = new Player();
 			
-			//Draw 10 pebbles for each player
 			for(int j = 0; j < 10; j++)
+			{
 				p[i].draw();
+			}
 			
 			s.execute(p[i]);
 		}
-		
 		
 	}
 	
