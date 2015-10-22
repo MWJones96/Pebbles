@@ -125,7 +125,7 @@ public class PebbleGame
 			
 			int index = new Random().nextInt(hand.size());
 			
-			
+			bags[]
 			
 			
 			
