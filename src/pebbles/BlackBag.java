@@ -1,7 +1,6 @@
 package pebbles;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class BlackBag extends Bag
 {

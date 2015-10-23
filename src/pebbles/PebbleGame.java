@@ -53,18 +53,26 @@ public class PebbleGame
 		private int bagLastDrawnFrom;
 		private boolean won = false;
 		
-		public Player()
+		private String name;
+		private int number;
+		
+		public Player(String name, int number)
 		{
 			hand = new ArrayList<Integer>();
+			this.name = name;
+			this.number = number;
 		}
 		
 		@Override
 		public void run()
 		{
 			for(int i = 0; i < 10; i++)
+			{
 				draw();
+				try {Thread.sleep(10);} catch (InterruptedException e){}
+			}
 			
-			if(getSum() == 100)
+			if(getSum() == 100 & won)
 			{
 				won = true;
 				isFinished = true;
@@ -72,58 +80,49 @@ public class PebbleGame
 
 			while(!isFinished)
 			{
-				discardAndDraw();
-					
-				if(getSum() == 100)
+				if(getSum() == 100 & !isFinished)
 				{
 					won = true;
 					isFinished = true;
 					break;
 				}
+				
+				discardAndDraw();
+				
+				if(getSum() == 100 & !isFinished)
+				{
+					won = true;
+					isFinished = true;
+					break;
+				}
+				
+				try {Thread.sleep(10);} catch (InterruptedException e){}
+				
 			}
 				
 			if(won)
-				System.out.println(Thread.currentThread().getName() + " won.");
+			{
+				try {w[number].write(name + " won.");} catch (IOException e1){}
+				
+				System.out.println("Game is over. Exiting...");
+				
+				for(int i = 0; i < numOfPlayers; i++)
+					try {w[i].close();} catch (IOException e){}
+			}
 			
 		}
 			
-		
 		public synchronized void discardAndDraw()
-		{
-			ArrayList<Integer> handTemp = hand;
-			
+		{	
 			assert(hand.size() == 10);
 			
 			if(!isFinished)
 			{	
+				
 				discard();
-				
-				if(isFinished)
-				{
-					hand = handTemp;
-					return;
-				}
-				
 				draw();
-				
-				if(isFinished)
-				{
-					hand = handTemp;
-					return;
-				}
-				
-				System.out.println("player" + Thread.currentThread().getName().charAt(Thread.currentThread().getName().length() - 1)
-						+ " has discarded a " + bags[bagLastDrawnFrom].getWhiteBag().getWeights().get(bags[bagLastDrawnFrom].getWhiteBag().getWeights().size() - 1) 
-						+ " to bag " + (bagLastDrawnFrom + 1) + "\nplayer" +
-						Thread.currentThread().getName().charAt(Thread.currentThread().getName().length() - 1) + "'s hand is " +
-						hand.toString().substring(1, hand.toString().length() - 1));
-				
-				System.out.println("player" + Thread.currentThread().getName().charAt(Thread.currentThread().getName().length() - 1)
-						+ " has drawn a " + hand.get(hand.size() - 1) + " from bag " + (bagLastDrawnFrom + 1) + "\nplayer" +
-						Thread.currentThread().getName().charAt(Thread.currentThread().getName().length() - 1) + "'s hand is " +
-						hand.toString().substring(1, hand.toString().length() - 1));
-				
 			}
+			
 			assert(hand.size() == 10);
 		}
 		
@@ -138,11 +137,21 @@ public class PebbleGame
 			
 			bags[index].pickUpPebble(hand);
 			setBagLastDrawnFrom(index);
+			
+			String drawStatus = name + " has drawn a " + hand.get(hand.size() - 1) + " from bag " + (bagLastDrawnFrom + 1) + 
+			"\n" + name + "'s hand is " + hand.toString().substring(1, hand.toString().length() - 1) + "\n";
+			
+			try {w[number].write(drawStatus);} catch (IOException e){}
 		}
 		
 		private synchronized void discard()
 		{
 			bags[bagLastDrawnFrom].putPebbleBack(hand);
+			
+			String discardStatus = name + " has discarded a " + bags[bagLastDrawnFrom].getWhiteBag().getWeights().get(bags[bagLastDrawnFrom].getWhiteBag().getWeights().size() - 1) 
+			+ " to bag " + (bagLastDrawnFrom + 1) + "\n" + name + "'s hand is " +hand.toString().substring(1, hand.toString().length() - 1) + "\n";
+			
+			try {w[number].write(discardStatus);} catch (IOException e){}
 		}
 		
 		private int getSum()
@@ -177,13 +186,12 @@ public class PebbleGame
 			} 
 			catch (IOException e){}
 			
-			p[i] = new Player();
+			p[i] = new Player("player" + (i + 1), i);
 			
 			s.execute(p[i]);
 		}
-		
-		for(int i = 0; i < numOfPlayers; i++)
-			try {w[i].close();} catch (IOException e){}
+			
+		s.shutdown();
 		
 	}
 	

@@ -1,0 +1,20 @@
+player2 has drawn a 9 from bag 1
+player2's hand is 9
+player2 has drawn a 9 from bag 3
+player2's hand is 9, 9
+player2 has drawn a 10 from bag 2
+player2's hand is 9, 9, 10
+player2 has drawn a 10 from bag 3
+player2's hand is 9, 9, 10, 10
+player2 has drawn a 10 from bag 2
+player2's hand is 9, 9, 10, 10, 10
+player2 has drawn a 9 from bag 2
+player2's hand is 9, 9, 10, 10, 10, 9
+player2 has drawn a 10 from bag 1
+player2's hand is 9, 9, 10, 10, 10, 9, 10
+player2 has drawn a 9 from bag 1
+player2's hand is 9, 9, 10, 10, 10, 9, 10, 9
+player2 has drawn a 10 from bag 3
+player2's hand is 9, 9, 10, 10, 10, 9, 10, 9, 10
+player2 has drawn a 10 from bag 3
+player2's hand is 9, 9, 10, 10, 10, 9, 10, 9, 10, 10
