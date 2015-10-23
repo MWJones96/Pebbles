@@ -3,6 +3,14 @@ package pebbles;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**A class that instantiates a pair of bags as a specific
+ * white and black bag will have forced association. Improves 
+ * communication between the two bags, resulting in increased
+ * 
+ * @date 23/10/15
+ * @author 35092 and 8744
+ */
+
 public class BagPair 
 {
 	private BlackBag b;
@@ -28,7 +36,7 @@ public class BagPair
 	 * removes it from the bag and then returns
 	 * its value.
 	 * 
-	 * @return the value of a randomly-chosen pebble
+	 * @param hand The hand of the player to give the pebble to
 	 */
 	
 	public void pickUpPebble(ArrayList<Integer> hand)

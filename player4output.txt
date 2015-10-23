@@ -1,0 +1,922 @@
+player4 has drawn a 73 from bag 2
+player4's hand is 73
+player4 has drawn a 82 from bag 2
+player4's hand is 73, 82
+player4 has drawn a 24 from bag 2
+player4's hand is 73, 82, 24
+player4 has drawn a 92 from bag 1
+player4's hand is 73, 82, 24, 92
+player4 has drawn a 84 from bag 2
+player4's hand is 73, 82, 24, 92, 84
+player4 has drawn a 98 from bag 1
+player4's hand is 73, 82, 24, 92, 84, 98
+player4 has drawn a 86 from bag 2
+player4's hand is 73, 82, 24, 92, 84, 98, 86
+player4 has drawn a 46 from bag 2
+player4's hand is 73, 82, 24, 92, 84, 98, 86, 46
+player4 has drawn a 18 from bag 2
+player4's hand is 73, 82, 24, 92, 84, 98, 86, 46, 18
+player4 has drawn a 30 from bag 1
+player4's hand is 73, 82, 24, 92, 84, 98, 86, 46, 18, 30
+player4 has discarded a 98 to bag 1
+player4's hand is 73, 82, 24, 92, 84, 86, 46, 18, 30
+player4 has drawn a 77 from bag 1
+player4's hand is 73, 82, 24, 92, 84, 86, 46, 18, 30, 77
+player4 has discarded a 46 to bag 1
+player4's hand is 73, 82, 24, 92, 84, 86, 18, 30, 77
+player4 has drawn a 81 from bag 2
+player4's hand is 73, 82, 24, 92, 84, 86, 18, 30, 77, 81
+player4 has discarded a 86 to bag 2
+player4's hand is 73, 82, 24, 92, 84, 18, 30, 77, 81
+player4 has drawn a 51 from bag 1
+player4's hand is 73, 82, 24, 92, 84, 18, 30, 77, 81, 51
+player4 has discarded a 81 to bag 1
+player4's hand is 73, 82, 24, 92, 84, 18, 30, 77, 51
+player4 has drawn a 77 from bag 3
+player4's hand is 73, 82, 24, 92, 84, 18, 30, 77, 51, 77
+player4 has discarded a 30 to bag 3
+player4's hand is 73, 82, 24, 92, 84, 18, 77, 51, 77
+player4 has drawn a 58 from bag 1
+player4's hand is 73, 82, 24, 92, 84, 18, 77, 51, 77, 58
+player4 has discarded a 77 to bag 1
+player4's hand is 73, 82, 24, 92, 84, 18, 77, 51, 58
+player4 has drawn a 45 from bag 1
+player4's hand is 73, 82, 24, 92, 84, 18, 77, 51, 58, 45
+player4 has discarded a 73 to bag 1
+player4's hand is 82, 24, 92, 84, 18, 77, 51, 58, 45
+player4 has drawn a 48 from bag 3
+player4's hand is 82, 24, 92, 84, 18, 77, 51, 58, 45, 48
+player4 has discarded a 45 to bag 3
+player4's hand is 82, 24, 92, 84, 18, 77, 51, 58, 48
+player4 has drawn a 17 from bag 2
+player4's hand is 82, 24, 92, 84, 18, 77, 51, 58, 48, 17
+player4 has discarded a 48 to bag 2
+player4's hand is 82, 24, 92, 84, 18, 77, 51, 58, 17
+player4 has drawn a 65 from bag 3
+player4's hand is 82, 24, 92, 84, 18, 77, 51, 58, 17, 65
+player4 has discarded a 82 to bag 3
+player4's hand is 24, 92, 84, 18, 77, 51, 58, 17, 65
+player4 has drawn a 69 from bag 1
+player4's hand is 24, 92, 84, 18, 77, 51, 58, 17, 65, 69
+player4 has discarded a 84 to bag 1
+player4's hand is 24, 92, 18, 77, 51, 58, 17, 65, 69
+player4 has drawn a 8 from bag 2
+player4's hand is 24, 92, 18, 77, 51, 58, 17, 65, 69, 8
+player4 has discarded a 65 to bag 2
+player4's hand is 24, 92, 18, 77, 51, 58, 17, 69, 8
+player4 has drawn a 91 from bag 3
+player4's hand is 24, 92, 18, 77, 51, 58, 17, 69, 8, 91
+player4 has discarded a 18 to bag 3
+player4's hand is 24, 92, 77, 51, 58, 17, 69, 8, 91
+player4 has drawn a 19 from bag 2
+player4's hand is 24, 92, 77, 51, 58, 17, 69, 8, 91, 19
+player4 has discarded a 8 to bag 2
+player4's hand is 24, 92, 77, 51, 58, 17, 69, 91, 19
+player4 has drawn a 50 from bag 3
+player4's hand is 24, 92, 77, 51, 58, 17, 69, 91, 19, 50
+player4 has discarded a 17 to bag 3
+player4's hand is 24, 92, 77, 51, 58, 69, 91, 19, 50
+player4 has drawn a 67 from bag 3
+player4's hand is 24, 92, 77, 51, 58, 69, 91, 19, 50, 67
+player4 has discarded a 58 to bag 3
+player4's hand is 24, 92, 77, 51, 69, 91, 19, 50, 67
+player4 has drawn a 13 from bag 2
+player4's hand is 24, 92, 77, 51, 69, 91, 19, 50, 67, 13
+player4 has discarded a 13 to bag 2
+player4's hand is 24, 92, 77, 51, 69, 91, 19, 50, 67
+player4 has drawn a 68 from bag 1
+player4's hand is 24, 92, 77, 51, 69, 91, 19, 50, 67, 68
+player4 has discarded a 68 to bag 1
+player4's hand is 24, 92, 77, 51, 69, 91, 19, 50, 67
+player4 has drawn a 7 from bag 2
+player4's hand is 24, 92, 77, 51, 69, 91, 19, 50, 67, 7
+player4 has discarded a 24 to bag 2
+player4's hand is 92, 77, 51, 69, 91, 19, 50, 67, 7
+player4 has drawn a 46 from bag 3
+player4's hand is 92, 77, 51, 69, 91, 19, 50, 67, 7, 46
+player4 has discarded a 50 to bag 3
+player4's hand is 92, 77, 51, 69, 91, 19, 67, 7, 46
+player4 has drawn a 56 from bag 1
+player4's hand is 92, 77, 51, 69, 91, 19, 67, 7, 46, 56
+player4 has discarded a 67 to bag 1
+player4's hand is 92, 77, 51, 69, 91, 19, 7, 46, 56
+player4 has drawn a 20 from bag 2
+player4's hand is 92, 77, 51, 69, 91, 19, 7, 46, 56, 20
+player4 has discarded a 46 to bag 2
+player4's hand is 92, 77, 51, 69, 91, 19, 7, 56, 20
+player4 has drawn a 38 from bag 2
+player4's hand is 92, 77, 51, 69, 91, 19, 7, 56, 20, 38
+player4 has discarded a 19 to bag 2
+player4's hand is 92, 77, 51, 69, 91, 7, 56, 20, 38
+player4 has drawn a 63 from bag 3
+player4's hand is 92, 77, 51, 69, 91, 7, 56, 20, 38, 63
+player4 has discarded a 77 to bag 3
+player4's hand is 92, 51, 69, 91, 7, 56, 20, 38, 63
+player4 has drawn a 89 from bag 2
+player4's hand is 92, 51, 69, 91, 7, 56, 20, 38, 63, 89
+player4 has discarded a 89 to bag 2
+player4's hand is 92, 51, 69, 91, 7, 56, 20, 38, 63
+player4 has drawn a 3 from bag 3
+player4's hand is 92, 51, 69, 91, 7, 56, 20, 38, 63, 3
+player4 has discarded a 69 to bag 3
+player4's hand is 92, 51, 91, 7, 56, 20, 38, 63, 3
+player4 has drawn a 38 from bag 1
+player4's hand is 92, 51, 91, 7, 56, 20, 38, 63, 3, 38
+player4 has discarded a 51 to bag 1
+player4's hand is 92, 91, 7, 56, 20, 38, 63, 3, 38
+player4 has drawn a 2 from bag 1
+player4's hand is 92, 91, 7, 56, 20, 38, 63, 3, 38, 2
+player4 has discarded a 63 to bag 1
+player4's hand is 92, 91, 7, 56, 20, 38, 3, 38, 2
+player4 has drawn a 60 from bag 3
+player4's hand is 92, 91, 7, 56, 20, 38, 3, 38, 2, 60
+player4 has discarded a 56 to bag 3
+player4's hand is 92, 91, 7, 20, 38, 3, 38, 2, 60
+player4 has drawn a 30 from bag 3
+player4's hand is 92, 91, 7, 20, 38, 3, 38, 2, 60, 30
+player4 has discarded a 7 to bag 3
+player4's hand is 92, 91, 20, 38, 3, 38, 2, 60, 30
+player4 has drawn a 92 from bag 3
+player4's hand is 92, 91, 20, 38, 3, 38, 2, 60, 30, 92
+player4 has discarded a 38 to bag 3
+player4's hand is 92, 91, 20, 3, 38, 2, 60, 30, 92
+player4 has drawn a 83 from bag 3
+player4's hand is 92, 91, 20, 3, 38, 2, 60, 30, 92, 83
+player4 has discarded a 2 to bag 3
+player4's hand is 92, 91, 20, 3, 38, 60, 30, 92, 83
+player4 has drawn a 61 from bag 2
+player4's hand is 92, 91, 20, 3, 38, 60, 30, 92, 83, 61
+player4 has discarded a 92 to bag 2
+player4's hand is 92, 91, 20, 3, 38, 60, 30, 83, 61
+player4 has drawn a 42 from bag 3
+player4's hand is 92, 91, 20, 3, 38, 60, 30, 83, 61, 42
+player4 has discarded a 91 to bag 3
+player4's hand is 92, 20, 3, 38, 60, 30, 83, 61, 42
+player4 has drawn a 100 from bag 1
+player4's hand is 92, 20, 3, 38, 60, 30, 83, 61, 42, 100
+player4 has discarded a 83 to bag 1
+player4's hand is 92, 20, 3, 38, 60, 30, 61, 42, 100
+player4 has drawn a 9 from bag 1
+player4's hand is 92, 20, 3, 38, 60, 30, 61, 42, 100, 9
+player4 has discarded a 38 to bag 1
+player4's hand is 92, 20, 3, 60, 30, 61, 42, 100, 9
+player4 has drawn a 97 from bag 1
+player4's hand is 92, 20, 3, 60, 30, 61, 42, 100, 9, 97
+player4 has discarded a 61 to bag 1
+player4's hand is 92, 20, 3, 60, 30, 42, 100, 9, 97
+player4 has drawn a 62 from bag 1
+player4's hand is 92, 20, 3, 60, 30, 42, 100, 9, 97, 62
+player4 has discarded a 60 to bag 1
+player4's hand is 92, 20, 3, 30, 42, 100, 9, 97, 62
+player4 has drawn a 85 from bag 1
+player4's hand is 92, 20, 3, 30, 42, 100, 9, 97, 62, 85
+player4 has discarded a 92 to bag 1
+player4's hand is 20, 3, 30, 42, 100, 9, 97, 62, 85
+player4 has drawn a 7 from bag 1
+player4's hand is 20, 3, 30, 42, 100, 9, 97, 62, 85, 7
+player4 has discarded a 20 to bag 1
+player4's hand is 3, 30, 42, 100, 9, 97, 62, 85, 7
+player4 has drawn a 51 from bag 2
+player4's hand is 3, 30, 42, 100, 9, 97, 62, 85, 7, 51
+player4 has discarded a 3 to bag 2
+player4's hand is 30, 42, 100, 9, 97, 62, 85, 7, 51
+player4 has drawn a 39 from bag 3
+player4's hand is 30, 42, 100, 9, 97, 62, 85, 7, 51, 39
+player4 has discarded a 30 to bag 3
+player4's hand is 42, 100, 9, 97, 62, 85, 7, 51, 39
+player4 has drawn a 42 from bag 1
+player4's hand is 42, 100, 9, 97, 62, 85, 7, 51, 39, 42
+player4 has discarded a 42 to bag 1
+player4's hand is 42, 100, 9, 97, 62, 85, 7, 51, 39
+player4 has drawn a 34 from bag 1
+player4's hand is 42, 100, 9, 97, 62, 85, 7, 51, 39, 34
+player4 has discarded a 7 to bag 1
+player4's hand is 42, 100, 9, 97, 62, 85, 51, 39, 34
+player4 has drawn a 50 from bag 2
+player4's hand is 42, 100, 9, 97, 62, 85, 51, 39, 34, 50
+player4 has discarded a 97 to bag 2
+player4's hand is 42, 100, 9, 62, 85, 51, 39, 34, 50
+player4 has drawn a 35 from bag 3
+player4's hand is 42, 100, 9, 62, 85, 51, 39, 34, 50, 35
+player4 has discarded a 35 to bag 3
+player4's hand is 42, 100, 9, 62, 85, 51, 39, 34, 50
+player4 has drawn a 40 from bag 3
+player4's hand is 42, 100, 9, 62, 85, 51, 39, 34, 50, 40
+player4 has discarded a 40 to bag 3
+player4's hand is 42, 100, 9, 62, 85, 51, 39, 34, 50
+player4 has drawn a 23 from bag 3
+player4's hand is 42, 100, 9, 62, 85, 51, 39, 34, 50, 23
+player4 has discarded a 51 to bag 3
+player4's hand is 42, 100, 9, 62, 85, 39, 34, 50, 23
+player4 has drawn a 87 from bag 2
+player4's hand is 42, 100, 9, 62, 85, 39, 34, 50, 23, 87
+player4 has discarded a 87 to bag 2
+player4's hand is 42, 100, 9, 62, 85, 39, 34, 50, 23
+player4 has drawn a 61 from bag 1
+player4's hand is 42, 100, 9, 62, 85, 39, 34, 50, 23, 61
+player4 has discarded a 61 to bag 1
+player4's hand is 42, 100, 9, 62, 85, 39, 34, 50, 23
+player4 has drawn a 20 from bag 1
+player4's hand is 42, 100, 9, 62, 85, 39, 34, 50, 23, 20
+player4 has discarded a 85 to bag 1
+player4's hand is 42, 100, 9, 62, 39, 34, 50, 23, 20
+player4 has drawn a 59 from bag 2
+player4's hand is 42, 100, 9, 62, 39, 34, 50, 23, 20, 59
+player4 has discarded a 62 to bag 2
+player4's hand is 42, 100, 9, 39, 34, 50, 23, 20, 59
+player4 has drawn a 12 from bag 2
+player4's hand is 42, 100, 9, 39, 34, 50, 23, 20, 59, 12
+player4 has discarded a 39 to bag 2
+player4's hand is 42, 100, 9, 34, 50, 23, 20, 59, 12
+player4 has drawn a 16 from bag 1
+player4's hand is 42, 100, 9, 34, 50, 23, 20, 59, 12, 16
+player4 has discarded a 9 to bag 1
+player4's hand is 42, 100, 34, 50, 23, 20, 59, 12, 16
+player4 has drawn a 80 from bag 2
+player4's hand is 42, 100, 34, 50, 23, 20, 59, 12, 16, 80
+player4 has discarded a 12 to bag 2
+player4's hand is 42, 100, 34, 50, 23, 20, 59, 16, 80
+player4 has drawn a 36 from bag 2
+player4's hand is 42, 100, 34, 50, 23, 20, 59, 16, 80, 36
+player4 has discarded a 42 to bag 2
+player4's hand is 100, 34, 50, 23, 20, 59, 16, 80, 36
+player4 has drawn a 74 from bag 1
+player4's hand is 100, 34, 50, 23, 20, 59, 16, 80, 36, 74
+player4 has discarded a 100 to bag 1
+player4's hand is 34, 50, 23, 20, 59, 16, 80, 36, 74
+player4 has drawn a 66 from bag 1
+player4's hand is 34, 50, 23, 20, 59, 16, 80, 36, 74, 66
+player4 has discarded a 34 to bag 1
+player4's hand is 50, 23, 20, 59, 16, 80, 36, 74, 66
+player4 has drawn a 78 from bag 1
+player4's hand is 50, 23, 20, 59, 16, 80, 36, 74, 66, 78
+player4 has discarded a 80 to bag 1
+player4's hand is 50, 23, 20, 59, 16, 36, 74, 66, 78
+player4 has drawn a 37 from bag 1
+player4's hand is 50, 23, 20, 59, 16, 36, 74, 66, 78, 37
+player4 has discarded a 74 to bag 1
+player4's hand is 50, 23, 20, 59, 16, 36, 66, 78, 37
+player4 has drawn a 56 from bag 2
+player4's hand is 50, 23, 20, 59, 16, 36, 66, 78, 37, 56
+player4 has discarded a 16 to bag 2
+player4's hand is 50, 23, 20, 59, 36, 66, 78, 37, 56
+player4 has drawn a 1 from bag 1
+player4's hand is 50, 23, 20, 59, 36, 66, 78, 37, 56, 1
+player4 has discarded a 23 to bag 1
+player4's hand is 50, 20, 59, 36, 66, 78, 37, 56, 1
+player4 has drawn a 61 from bag 3
+player4's hand is 50, 20, 59, 36, 66, 78, 37, 56, 1, 61
+player4 has discarded a 56 to bag 3
+player4's hand is 50, 20, 59, 36, 66, 78, 37, 1, 61
+player4 has drawn a 78 from bag 1
+player4's hand is 50, 20, 59, 36, 66, 78, 37, 1, 61, 78
+player4 has discarded a 50 to bag 1
+player4's hand is 20, 59, 36, 66, 78, 37, 1, 61, 78
+player4 has drawn a 41 from bag 1
+player4's hand is 20, 59, 36, 66, 78, 37, 1, 61, 78, 41
+player4 has discarded a 59 to bag 1
+player4's hand is 20, 36, 66, 78, 37, 1, 61, 78, 41
+player4 has drawn a 4 from bag 2
+player4's hand is 20, 36, 66, 78, 37, 1, 61, 78, 41, 4
+player4 has discarded a 66 to bag 2
+player4's hand is 20, 36, 78, 37, 1, 61, 78, 41, 4
+player4 has drawn a 13 from bag 2
+player4's hand is 20, 36, 78, 37, 1, 61, 78, 41, 4, 13
+player4 has discarded a 37 to bag 2
+player4's hand is 20, 36, 78, 1, 61, 78, 41, 4, 13
+player4 has drawn a 81 from bag 3
+player4's hand is 20, 36, 78, 1, 61, 78, 41, 4, 13, 81
+player4 has discarded a 4 to bag 3
+player4's hand is 20, 36, 78, 1, 61, 78, 41, 13, 81
+player4 has drawn a 68 from bag 1
+player4's hand is 20, 36, 78, 1, 61, 78, 41, 13, 81, 68
+player4 has discarded a 81 to bag 1
+player4's hand is 20, 36, 78, 1, 61, 78, 41, 13, 68
+player4 has drawn a 100 from bag 3
+player4's hand is 20, 36, 78, 1, 61, 78, 41, 13, 68, 100
+player4 has discarded a 78 to bag 3
+player4's hand is 20, 36, 1, 61, 78, 41, 13, 68, 100
+player4 has drawn a 89 from bag 1
+player4's hand is 20, 36, 1, 61, 78, 41, 13, 68, 100, 89
+player4 has discarded a 36 to bag 1
+player4's hand is 20, 1, 61, 78, 41, 13, 68, 100, 89
+player4 has drawn a 98 from bag 3
+player4's hand is 20, 1, 61, 78, 41, 13, 68, 100, 89, 98
+player4 has discarded a 20 to bag 3
+player4's hand is 1, 61, 78, 41, 13, 68, 100, 89, 98
+player4 has drawn a 39 from bag 3
+player4's hand is 1, 61, 78, 41, 13, 68, 100, 89, 98, 39
+player4 has discarded a 98 to bag 3
+player4's hand is 1, 61, 78, 41, 13, 68, 100, 89, 39
+player4 has drawn a 18 from bag 1
+player4's hand is 1, 61, 78, 41, 13, 68, 100, 89, 39, 18
+player4 has discarded a 13 to bag 1
+player4's hand is 1, 61, 78, 41, 68, 100, 89, 39, 18
+player4 has drawn a 79 from bag 1
+player4's hand is 1, 61, 78, 41, 68, 100, 89, 39, 18, 79
+player4 has discarded a 39 to bag 1
+player4's hand is 1, 61, 78, 41, 68, 100, 89, 18, 79
+player4 has drawn a 53 from bag 3
+player4's hand is 1, 61, 78, 41, 68, 100, 89, 18, 79, 53
+player4 has discarded a 78 to bag 3
+player4's hand is 1, 61, 41, 68, 100, 89, 18, 79, 53
+player4 has drawn a 20 from bag 1
+player4's hand is 1, 61, 41, 68, 100, 89, 18, 79, 53, 20
+player4 has discarded a 79 to bag 1
+player4's hand is 1, 61, 41, 68, 100, 89, 18, 53, 20
+player4 has drawn a 72 from bag 2
+player4's hand is 1, 61, 41, 68, 100, 89, 18, 53, 20, 72
+player4 has discarded a 72 to bag 2
+player4's hand is 1, 61, 41, 68, 100, 89, 18, 53, 20
+player4 has drawn a 80 from bag 2
+player4's hand is 1, 61, 41, 68, 100, 89, 18, 53, 20, 80
+player4 has discarded a 68 to bag 2
+player4's hand is 1, 61, 41, 100, 89, 18, 53, 20, 80
+player4 has drawn a 100 from bag 1
+player4's hand is 1, 61, 41, 100, 89, 18, 53, 20, 80, 100
+player4 has discarded a 100 to bag 1
+player4's hand is 1, 61, 41, 100, 89, 18, 53, 20, 80
+player4 has drawn a 35 from bag 2
+player4's hand is 1, 61, 41, 100, 89, 18, 53, 20, 80, 35
+player4 has discarded a 89 to bag 2
+player4's hand is 1, 61, 41, 100, 18, 53, 20, 80, 35
+player4 has drawn a 95 from bag 1
+player4's hand is 1, 61, 41, 100, 18, 53, 20, 80, 35, 95
+player4 has discarded a 20 to bag 1
+player4's hand is 1, 61, 41, 100, 18, 53, 80, 35, 95
+player4 has drawn a 70 from bag 3
+player4's hand is 1, 61, 41, 100, 18, 53, 80, 35, 95, 70
+player4 has discarded a 18 to bag 3
+player4's hand is 1, 61, 41, 100, 53, 80, 35, 95, 70
+player4 has drawn a 53 from bag 3
+player4's hand is 1, 61, 41, 100, 53, 80, 35, 95, 70, 53
+player4 has discarded a 35 to bag 3
+player4's hand is 1, 61, 41, 100, 53, 80, 95, 70, 53
+player4 has drawn a 9 from bag 1
+player4's hand is 1, 61, 41, 100, 53, 80, 95, 70, 53, 9
+player4 has discarded a 61 to bag 1
+player4's hand is 1, 41, 100, 53, 80, 95, 70, 53, 9
+player4 has drawn a 10 from bag 1
+player4's hand is 1, 41, 100, 53, 80, 95, 70, 53, 9, 10
+player4 has discarded a 1 to bag 1
+player4's hand is 41, 100, 53, 80, 95, 70, 53, 9, 10
+player4 has drawn a 94 from bag 1
+player4's hand is 41, 100, 53, 80, 95, 70, 53, 9, 10, 94
+player4 has discarded a 9 to bag 1
+player4's hand is 41, 100, 53, 80, 95, 70, 53, 10, 94
+player4 has drawn a 55 from bag 1
+player4's hand is 41, 100, 53, 80, 95, 70, 53, 10, 94, 55
+player4 has discarded a 41 to bag 1
+player4's hand is 100, 53, 80, 95, 70, 53, 10, 94, 55
+player4 has drawn a 52 from bag 2
+player4's hand is 100, 53, 80, 95, 70, 53, 10, 94, 55, 52
+player4 has discarded a 53 to bag 2
+player4's hand is 100, 80, 95, 70, 53, 10, 94, 55, 52
+player4 has drawn a 37 from bag 2
+player4's hand is 100, 80, 95, 70, 53, 10, 94, 55, 52, 37
+player4 has discarded a 95 to bag 2
+player4's hand is 100, 80, 70, 53, 10, 94, 55, 52, 37
+player4 has drawn a 17 from bag 3
+player4's hand is 100, 80, 70, 53, 10, 94, 55, 52, 37, 17
+player4 has discarded a 80 to bag 3
+player4's hand is 100, 70, 53, 10, 94, 55, 52, 37, 17
+player4 has drawn a 74 from bag 2
+player4's hand is 100, 70, 53, 10, 94, 55, 52, 37, 17, 74
+player4 has discarded a 17 to bag 2
+player4's hand is 100, 70, 53, 10, 94, 55, 52, 37, 74
+player4 has drawn a 38 from bag 3
+player4's hand is 100, 70, 53, 10, 94, 55, 52, 37, 74, 38
+player4 has discarded a 100 to bag 3
+player4's hand is 70, 53, 10, 94, 55, 52, 37, 74, 38
+player4 has drawn a 25 from bag 1
+player4's hand is 70, 53, 10, 94, 55, 52, 37, 74, 38, 25
+player4 has discarded a 37 to bag 1
+player4's hand is 70, 53, 10, 94, 55, 52, 74, 38, 25
+player4 has drawn a 76 from bag 3
+player4's hand is 70, 53, 10, 94, 55, 52, 74, 38, 25, 76
+player4 has discarded a 52 to bag 3
+player4's hand is 70, 53, 10, 94, 55, 74, 38, 25, 76
+player4 has drawn a 99 from bag 2
+player4's hand is 70, 53, 10, 94, 55, 74, 38, 25, 76, 99
+player4 has discarded a 53 to bag 2
+player4's hand is 70, 10, 94, 55, 74, 38, 25, 76, 99
+player4 has drawn a 81 from bag 1
+player4's hand is 70, 10, 94, 55, 74, 38, 25, 76, 99, 81
+player4 has discarded a 10 to bag 1
+player4's hand is 70, 94, 55, 74, 38, 25, 76, 99, 81
+player4 has drawn a 65 from bag 2
+player4's hand is 70, 94, 55, 74, 38, 25, 76, 99, 81, 65
+player4 has discarded a 38 to bag 2
+player4's hand is 70, 94, 55, 74, 25, 76, 99, 81, 65
+player4 has drawn a 97 from bag 2
+player4's hand is 70, 94, 55, 74, 25, 76, 99, 81, 65, 97
+player4 has discarded a 76 to bag 2
+player4's hand is 70, 94, 55, 74, 25, 99, 81, 65, 97
+player4 has drawn a 42 from bag 2
+player4's hand is 70, 94, 55, 74, 25, 99, 81, 65, 97, 42
+player4 has discarded a 25 to bag 2
+player4's hand is 70, 94, 55, 74, 99, 81, 65, 97, 42
+player4 has drawn a 54 from bag 3
+player4's hand is 70, 94, 55, 74, 99, 81, 65, 97, 42, 54
+player4 has discarded a 54 to bag 3
+player4's hand is 70, 94, 55, 74, 99, 81, 65, 97, 42
+player4 has drawn a 48 from bag 2
+player4's hand is 70, 94, 55, 74, 99, 81, 65, 97, 42, 48
+player4 has discarded a 74 to bag 2
+player4's hand is 70, 94, 55, 99, 81, 65, 97, 42, 48
+player4 has drawn a 33 from bag 3
+player4's hand is 70, 94, 55, 99, 81, 65, 97, 42, 48, 33
+player4 has discarded a 81 to bag 3
+player4's hand is 70, 94, 55, 99, 65, 97, 42, 48, 33
+player4 has drawn a 22 from bag 1
+player4's hand is 70, 94, 55, 99, 65, 97, 42, 48, 33, 22
+player4 has discarded a 99 to bag 1
+player4's hand is 70, 94, 55, 65, 97, 42, 48, 33, 22
+player4 has drawn a 9 from bag 3
+player4's hand is 70, 94, 55, 65, 97, 42, 48, 33, 22, 9
+player4 has discarded a 65 to bag 3
+player4's hand is 70, 94, 55, 97, 42, 48, 33, 22, 9
+player4 has drawn a 42 from bag 1
+player4's hand is 70, 94, 55, 97, 42, 48, 33, 22, 9, 42
+player4 has discarded a 42 to bag 1
+player4's hand is 70, 94, 55, 97, 48, 33, 22, 9, 42
+player4 has drawn a 45 from bag 3
+player4's hand is 70, 94, 55, 97, 48, 33, 22, 9, 42, 45
+player4 has discarded a 70 to bag 3
+player4's hand is 94, 55, 97, 48, 33, 22, 9, 42, 45
+player4 has drawn a 81 from bag 2
+player4's hand is 94, 55, 97, 48, 33, 22, 9, 42, 45, 81
+player4 has discarded a 9 to bag 2
+player4's hand is 94, 55, 97, 48, 33, 22, 42, 45, 81
+player4 has drawn a 16 from bag 1
+player4's hand is 94, 55, 97, 48, 33, 22, 42, 45, 81, 16
+player4 has discarded a 22 to bag 1
+player4's hand is 94, 55, 97, 48, 33, 42, 45, 81, 16
+player4 has drawn a 56 from bag 3
+player4's hand is 94, 55, 97, 48, 33, 42, 45, 81, 16, 56
+player4 has discarded a 55 to bag 3
+player4's hand is 94, 97, 48, 33, 42, 45, 81, 16, 56
+player4 has drawn a 95 from bag 2
+player4's hand is 94, 97, 48, 33, 42, 45, 81, 16, 56, 95
+player4 has discarded a 94 to bag 2
+player4's hand is 97, 48, 33, 42, 45, 81, 16, 56, 95
+player4 has drawn a 4 from bag 2
+player4's hand is 97, 48, 33, 42, 45, 81, 16, 56, 95, 4
+player4 has discarded a 97 to bag 2
+player4's hand is 48, 33, 42, 45, 81, 16, 56, 95, 4
+player4 has drawn a 74 from bag 1
+player4's hand is 48, 33, 42, 45, 81, 16, 56, 95, 4, 74
+player4 has discarded a 48 to bag 1
+player4's hand is 33, 42, 45, 81, 16, 56, 95, 4, 74
+player4 has drawn a 21 from bag 1
+player4's hand is 33, 42, 45, 81, 16, 56, 95, 4, 74, 21
+player4 has discarded a 4 to bag 1
+player4's hand is 33, 42, 45, 81, 16, 56, 95, 74, 21
+player4 has drawn a 71 from bag 2
+player4's hand is 33, 42, 45, 81, 16, 56, 95, 74, 21, 71
+player4 has discarded a 16 to bag 2
+player4's hand is 33, 42, 45, 81, 56, 95, 74, 21, 71
+player4 has drawn a 47 from bag 3
+player4's hand is 33, 42, 45, 81, 56, 95, 74, 21, 71, 47
+player4 has discarded a 21 to bag 3
+player4's hand is 33, 42, 45, 81, 56, 95, 74, 71, 47
+player4 has drawn a 88 from bag 3
+player4's hand is 33, 42, 45, 81, 56, 95, 74, 71, 47, 88
+player4 has discarded a 71 to bag 3
+player4's hand is 33, 42, 45, 81, 56, 95, 74, 47, 88
+player4 has drawn a 67 from bag 1
+player4's hand is 33, 42, 45, 81, 56, 95, 74, 47, 88, 67
+player4 has discarded a 56 to bag 1
+player4's hand is 33, 42, 45, 81, 95, 74, 47, 88, 67
+player4 has drawn a 40 from bag 3
+player4's hand is 33, 42, 45, 81, 95, 74, 47, 88, 67, 40
+player4 has discarded a 67 to bag 3
+player4's hand is 33, 42, 45, 81, 95, 74, 47, 88, 40
+player4 has drawn a 96 from bag 2
+player4's hand is 33, 42, 45, 81, 95, 74, 47, 88, 40, 96
+player4 has discarded a 96 to bag 2
+player4's hand is 33, 42, 45, 81, 95, 74, 47, 88, 40
+player4 has drawn a 23 from bag 1
+player4's hand is 33, 42, 45, 81, 95, 74, 47, 88, 40, 23
+player4 has discarded a 47 to bag 1
+player4's hand is 33, 42, 45, 81, 95, 74, 88, 40, 23
+player4 has drawn a 34 from bag 1
+player4's hand is 33, 42, 45, 81, 95, 74, 88, 40, 23, 34
+player4 has discarded a 23 to bag 1
+player4's hand is 33, 42, 45, 81, 95, 74, 88, 40, 34
+player4 has drawn a 4 from bag 2
+player4's hand is 33, 42, 45, 81, 95, 74, 88, 40, 34, 4
+player4 has discarded a 34 to bag 2
+player4's hand is 33, 42, 45, 81, 95, 74, 88, 40, 4
+player4 has drawn a 1 from bag 3
+player4's hand is 33, 42, 45, 81, 95, 74, 88, 40, 4, 1
+player4 has discarded a 81 to bag 3
+player4's hand is 33, 42, 45, 95, 74, 88, 40, 4, 1
+player4 has drawn a 33 from bag 3
+player4's hand is 33, 42, 45, 95, 74, 88, 40, 4, 1, 33
+player4 has discarded a 4 to bag 3
+player4's hand is 33, 42, 45, 95, 74, 88, 40, 1, 33
+player4 has drawn a 58 from bag 2
+player4's hand is 33, 42, 45, 95, 74, 88, 40, 1, 33, 58
+player4 has discarded a 45 to bag 2
+player4's hand is 33, 42, 95, 74, 88, 40, 1, 33, 58
+player4 has drawn a 87 from bag 2
+player4's hand is 33, 42, 95, 74, 88, 40, 1, 33, 58, 87
+player4 has discarded a 87 to bag 2
+player4's hand is 33, 42, 95, 74, 88, 40, 1, 33, 58
+player4 has drawn a 54 from bag 2
+player4's hand is 33, 42, 95, 74, 88, 40, 1, 33, 58, 54
+player4 has discarded a 33 to bag 2
+player4's hand is 42, 95, 74, 88, 40, 1, 33, 58, 54
+player4 has drawn a 96 from bag 1
+player4's hand is 42, 95, 74, 88, 40, 1, 33, 58, 54, 96
+player4 has discarded a 42 to bag 1
+player4's hand is 95, 74, 88, 40, 1, 33, 58, 54, 96
+player4 has drawn a 12 from bag 3
+player4's hand is 95, 74, 88, 40, 1, 33, 58, 54, 96, 12
+player4 has discarded a 33 to bag 3
+player4's hand is 95, 74, 88, 40, 1, 58, 54, 96, 12
+player4 has drawn a 41 from bag 2
+player4's hand is 95, 74, 88, 40, 1, 58, 54, 96, 12, 41
+player4 has discarded a 96 to bag 2
+player4's hand is 95, 74, 88, 40, 1, 58, 54, 12, 41
+player4 has drawn a 52 from bag 2
+player4's hand is 95, 74, 88, 40, 1, 58, 54, 12, 41, 52
+player4 has discarded a 54 to bag 2
+player4's hand is 95, 74, 88, 40, 1, 58, 12, 41, 52
+player4 has drawn a 82 from bag 3
+player4's hand is 95, 74, 88, 40, 1, 58, 12, 41, 52, 82
+player4 has discarded a 41 to bag 3
+player4's hand is 95, 74, 88, 40, 1, 58, 12, 52, 82
+player4 has drawn a 96 from bag 1
+player4's hand is 95, 74, 88, 40, 1, 58, 12, 52, 82, 96
+player4 has discarded a 40 to bag 1
+player4's hand is 95, 74, 88, 1, 58, 12, 52, 82, 96
+player4 has drawn a 86 from bag 1
+player4's hand is 95, 74, 88, 1, 58, 12, 52, 82, 96, 86
+player4 has discarded a 95 to bag 1
+player4's hand is 74, 88, 1, 58, 12, 52, 82, 96, 86
+player4 has drawn a 22 from bag 1
+player4's hand is 74, 88, 1, 58, 12, 52, 82, 96, 86, 22
+player4 has discarded a 12 to bag 1
+player4's hand is 74, 88, 1, 58, 52, 82, 96, 86, 22
+player4 has drawn a 33 from bag 3
+player4's hand is 74, 88, 1, 58, 52, 82, 96, 86, 22, 33
+player4 has discarded a 33 to bag 3
+player4's hand is 74, 88, 1, 58, 52, 82, 96, 86, 22
+player4 has drawn a 90 from bag 2
+player4's hand is 74, 88, 1, 58, 52, 82, 96, 86, 22, 90
+player4 has discarded a 52 to bag 2
+player4's hand is 74, 88, 1, 58, 82, 96, 86, 22, 90
+player4 has drawn a 30 from bag 3
+player4's hand is 74, 88, 1, 58, 82, 96, 86, 22, 90, 30
+player4 has discarded a 96 to bag 3
+player4's hand is 74, 88, 1, 58, 82, 86, 22, 90, 30
+player4 has drawn a 6 from bag 1
+player4's hand is 74, 88, 1, 58, 82, 86, 22, 90, 30, 6
+player4 has discarded a 74 to bag 1
+player4's hand is 88, 1, 58, 82, 86, 22, 90, 30, 6
+player4 has drawn a 74 from bag 2
+player4's hand is 88, 1, 58, 82, 86, 22, 90, 30, 6, 74
+player4 has discarded a 90 to bag 2
+player4's hand is 88, 1, 58, 82, 86, 22, 30, 6, 74
+player4 has drawn a 87 from bag 1
+player4's hand is 88, 1, 58, 82, 86, 22, 30, 6, 74, 87
+player4 has discarded a 86 to bag 1
+player4's hand is 88, 1, 58, 82, 22, 30, 6, 74, 87
+player4 has drawn a 38 from bag 3
+player4's hand is 88, 1, 58, 82, 22, 30, 6, 74, 87, 38
+player4 has discarded a 30 to bag 3
+player4's hand is 88, 1, 58, 82, 22, 6, 74, 87, 38
+player4 has drawn a 7 from bag 1
+player4's hand is 88, 1, 58, 82, 22, 6, 74, 87, 38, 7
+player4 has discarded a 38 to bag 1
+player4's hand is 88, 1, 58, 82, 22, 6, 74, 87, 7
+player4 has drawn a 50 from bag 1
+player4's hand is 88, 1, 58, 82, 22, 6, 74, 87, 7, 50
+player4 has discarded a 1 to bag 1
+player4's hand is 88, 58, 82, 22, 6, 74, 87, 7, 50
+player4 has drawn a 47 from bag 2
+player4's hand is 88, 58, 82, 22, 6, 74, 87, 7, 50, 47
+player4 has discarded a 50 to bag 2
+player4's hand is 88, 58, 82, 22, 6, 74, 87, 7, 47
+player4 has drawn a 6 from bag 1
+player4's hand is 88, 58, 82, 22, 6, 74, 87, 7, 47, 6
+player4 has discarded a 7 to bag 1
+player4's hand is 88, 58, 82, 22, 6, 74, 87, 47, 6
+player4 has drawn a 33 from bag 3
+player4's hand is 88, 58, 82, 22, 6, 74, 87, 47, 6, 33
+player4 has discarded a 87 to bag 3
+player4's hand is 88, 58, 82, 22, 6, 74, 47, 6, 33
+player4 has drawn a 90 from bag 2
+player4's hand is 88, 58, 82, 22, 6, 74, 47, 6, 33, 90
+player4 has discarded a 6 to bag 2
+player4's hand is 88, 58, 82, 22, 6, 74, 47, 33, 90
+player4 has drawn a 81 from bag 3
+player4's hand is 88, 58, 82, 22, 6, 74, 47, 33, 90, 81
+player4 has discarded a 88 to bag 3
+player4's hand is 58, 82, 22, 6, 74, 47, 33, 90, 81
+player4 has drawn a 19 from bag 2
+player4's hand is 58, 82, 22, 6, 74, 47, 33, 90, 81, 19
+player4 has discarded a 74 to bag 2
+player4's hand is 58, 82, 22, 6, 47, 33, 90, 81, 19
+player4 has drawn a 23 from bag 3
+player4's hand is 58, 82, 22, 6, 47, 33, 90, 81, 19, 23
+player4 has discarded a 82 to bag 3
+player4's hand is 58, 22, 6, 47, 33, 90, 81, 19, 23
+player4 has drawn a 91 from bag 2
+player4's hand is 58, 22, 6, 47, 33, 90, 81, 19, 23, 91
+player4 has discarded a 6 to bag 2
+player4's hand is 58, 22, 47, 33, 90, 81, 19, 23, 91
+player4 has drawn a 100 from bag 3
+player4's hand is 58, 22, 47, 33, 90, 81, 19, 23, 91, 100
+player4 has discarded a 58 to bag 3
+player4's hand is 22, 47, 33, 90, 81, 19, 23, 91, 100
+player4 has drawn a 31 from bag 3
+player4's hand is 22, 47, 33, 90, 81, 19, 23, 91, 100, 31
+player4 has discarded a 90 to bag 3
+player4's hand is 22, 47, 33, 81, 19, 23, 91, 100, 31
+player4 has drawn a 45 from bag 3
+player4's hand is 22, 47, 33, 81, 19, 23, 91, 100, 31, 45
+player4 has discarded a 22 to bag 3
+player4's hand is 47, 33, 81, 19, 23, 91, 100, 31, 45
+player4 has drawn a 4 from bag 3
+player4's hand is 47, 33, 81, 19, 23, 91, 100, 31, 45, 4
+player4 has discarded a 19 to bag 3
+player4's hand is 47, 33, 81, 23, 91, 100, 31, 45, 4
+player4 has drawn a 41 from bag 3
+player4's hand is 47, 33, 81, 23, 91, 100, 31, 45, 4, 41
+player4 has discarded a 33 to bag 3
+player4's hand is 47, 81, 23, 91, 100, 31, 45, 4, 41
+player4 has drawn a 17 from bag 1
+player4's hand is 47, 81, 23, 91, 100, 31, 45, 4, 41, 17
+player4 has discarded a 91 to bag 1
+player4's hand is 47, 81, 23, 100, 31, 45, 4, 41, 17
+player4 has drawn a 63 from bag 1
+player4's hand is 47, 81, 23, 100, 31, 45, 4, 41, 17, 63
+player4 has discarded a 17 to bag 1
+player4's hand is 47, 81, 23, 100, 31, 45, 4, 41, 63
+player4 has drawn a 37 from bag 2
+player4's hand is 47, 81, 23, 100, 31, 45, 4, 41, 63, 37
+player4 has discarded a 23 to bag 2
+player4's hand is 47, 81, 100, 31, 45, 4, 41, 63, 37
+player4 has drawn a 87 from bag 2
+player4's hand is 47, 81, 100, 31, 45, 4, 41, 63, 37, 87
+player4 has discarded a 100 to bag 2
+player4's hand is 47, 81, 31, 45, 4, 41, 63, 37, 87
+player4 has drawn a 73 from bag 3
+player4's hand is 47, 81, 31, 45, 4, 41, 63, 37, 87, 73
+player4 has discarded a 45 to bag 3
+player4's hand is 47, 81, 31, 4, 41, 63, 37, 87, 73
+player4 has drawn a 87 from bag 2
+player4's hand is 47, 81, 31, 4, 41, 63, 37, 87, 73, 87
+player4 has discarded a 41 to bag 2
+player4's hand is 47, 81, 31, 4, 63, 37, 87, 73, 87
+player4 has drawn a 23 from bag 3
+player4's hand is 47, 81, 31, 4, 63, 37, 87, 73, 87, 23
+player4 has discarded a 73 to bag 3
+player4's hand is 47, 81, 31, 4, 63, 37, 87, 87, 23
+player4 has drawn a 97 from bag 2
+player4's hand is 47, 81, 31, 4, 63, 37, 87, 87, 23, 97
+player4 has discarded a 87 to bag 2
+player4's hand is 47, 81, 31, 4, 63, 37, 87, 23, 97
+player4 has drawn a 61 from bag 3
+player4's hand is 47, 81, 31, 4, 63, 37, 87, 23, 97, 61
+player4 has discarded a 81 to bag 3
+player4's hand is 47, 31, 4, 63, 37, 87, 23, 97, 61
+player4 has drawn a 1 from bag 2
+player4's hand is 47, 31, 4, 63, 37, 87, 23, 97, 61, 1
+player4 has discarded a 23 to bag 2
+player4's hand is 47, 31, 4, 63, 37, 87, 97, 61, 1
+player4 has drawn a 45 from bag 1
+player4's hand is 47, 31, 4, 63, 37, 87, 97, 61, 1, 45
+player4 has discarded a 37 to bag 1
+player4's hand is 47, 31, 4, 63, 87, 97, 61, 1, 45
+player4 has drawn a 83 from bag 2
+player4's hand is 47, 31, 4, 63, 87, 97, 61, 1, 45, 83
+player4 has discarded a 4 to bag 2
+player4's hand is 47, 31, 63, 87, 97, 61, 1, 45, 83
+player4 has drawn a 61 from bag 3
+player4's hand is 47, 31, 63, 87, 97, 61, 1, 45, 83, 61
+player4 has discarded a 31 to bag 3
+player4's hand is 47, 63, 87, 97, 61, 1, 45, 83, 61
+player4 has drawn a 16 from bag 2
+player4's hand is 47, 63, 87, 97, 61, 1, 45, 83, 61, 16
+player4 has discarded a 63 to bag 2
+player4's hand is 47, 87, 97, 61, 1, 45, 83, 61, 16
+player4 has drawn a 33 from bag 3
+player4's hand is 47, 87, 97, 61, 1, 45, 83, 61, 16, 33
+player4 has discarded a 45 to bag 3
+player4's hand is 47, 87, 97, 61, 1, 83, 61, 16, 33
+player4 has drawn a 17 from bag 3
+player4's hand is 47, 87, 97, 61, 1, 83, 61, 16, 33, 17
+player4 has discarded a 33 to bag 3
+player4's hand is 47, 87, 97, 61, 1, 83, 61, 16, 17
+player4 has drawn a 95 from bag 2
+player4's hand is 47, 87, 97, 61, 1, 83, 61, 16, 17, 95
+player4 has discarded a 95 to bag 2
+player4's hand is 47, 87, 97, 61, 1, 83, 61, 16, 17
+player4 has drawn a 40 from bag 1
+player4's hand is 47, 87, 97, 61, 1, 83, 61, 16, 17, 40
+player4 has discarded a 61 to bag 1
+player4's hand is 47, 87, 97, 1, 83, 61, 16, 17, 40
+player4 has drawn a 39 from bag 1
+player4's hand is 47, 87, 97, 1, 83, 61, 16, 17, 40, 39
+player4 has discarded a 87 to bag 1
+player4's hand is 47, 97, 1, 83, 61, 16, 17, 40, 39
+player4 has drawn a 71 from bag 2
+player4's hand is 47, 97, 1, 83, 61, 16, 17, 40, 39, 71
+player4 has discarded a 16 to bag 2
+player4's hand is 47, 97, 1, 83, 61, 17, 40, 39, 71
+player4 has drawn a 88 from bag 2
+player4's hand is 47, 97, 1, 83, 61, 17, 40, 39, 71, 88
+player4 has discarded a 88 to bag 2
+player4's hand is 47, 97, 1, 83, 61, 17, 40, 39, 71
+player4 has drawn a 79 from bag 2
+player4's hand is 47, 97, 1, 83, 61, 17, 40, 39, 71, 79
+player4 has discarded a 1 to bag 2
+player4's hand is 47, 97, 83, 61, 17, 40, 39, 71, 79
+player4 has drawn a 23 from bag 3
+player4's hand is 47, 97, 83, 61, 17, 40, 39, 71, 79, 23
+player4 has discarded a 97 to bag 3
+player4's hand is 47, 83, 61, 17, 40, 39, 71, 79, 23
+player4 has drawn a 20 from bag 3
+player4's hand is 47, 83, 61, 17, 40, 39, 71, 79, 23, 20
+player4 has discarded a 61 to bag 3
+player4's hand is 47, 83, 17, 40, 39, 71, 79, 23, 20
+player4 has drawn a 99 from bag 1
+player4's hand is 47, 83, 17, 40, 39, 71, 79, 23, 20, 99
+player4 has discarded a 71 to bag 1
+player4's hand is 47, 83, 17, 40, 39, 79, 23, 20, 99
+player4 has drawn a 10 from bag 1
+player4's hand is 47, 83, 17, 40, 39, 79, 23, 20, 99, 10
+player4 has discarded a 99 to bag 1
+player4's hand is 47, 83, 17, 40, 39, 79, 23, 20, 10
+player4 has drawn a 30 from bag 1
+player4's hand is 47, 83, 17, 40, 39, 79, 23, 20, 10, 30
+player4 has discarded a 83 to bag 1
+player4's hand is 47, 17, 40, 39, 79, 23, 20, 10, 30
+player4 has drawn a 85 from bag 3
+player4's hand is 47, 17, 40, 39, 79, 23, 20, 10, 30, 85
+player4 has discarded a 47 to bag 3
+player4's hand is 17, 40, 39, 79, 23, 20, 10, 30, 85
+player4 has drawn a 9 from bag 1
+player4's hand is 17, 40, 39, 79, 23, 20, 10, 30, 85, 9
+player4 has discarded a 39 to bag 1
+player4's hand is 17, 40, 79, 23, 20, 10, 30, 85, 9
+player4 has drawn a 21 from bag 3
+player4's hand is 17, 40, 79, 23, 20, 10, 30, 85, 9, 21
+player4 has discarded a 79 to bag 3
+player4's hand is 17, 40, 23, 20, 10, 30, 85, 9, 21
+player4 has drawn a 12 from bag 3
+player4's hand is 17, 40, 23, 20, 10, 30, 85, 9, 21, 12
+player4 has discarded a 21 to bag 3
+player4's hand is 17, 40, 23, 20, 10, 30, 85, 9, 12
+player4 has drawn a 24 from bag 3
+player4's hand is 17, 40, 23, 20, 10, 30, 85, 9, 12, 24
+player4 has discarded a 30 to bag 3
+player4's hand is 17, 40, 23, 20, 10, 85, 9, 12, 24
+player4 has drawn a 32 from bag 2
+player4's hand is 17, 40, 23, 20, 10, 85, 9, 12, 24, 32
+player4 has discarded a 40 to bag 2
+player4's hand is 17, 23, 20, 10, 85, 9, 12, 24, 32
+player4 has drawn a 38 from bag 2
+player4's hand is 17, 23, 20, 10, 85, 9, 12, 24, 32, 38
+player4 has discarded a 23 to bag 2
+player4's hand is 17, 20, 10, 85, 9, 12, 24, 32, 38
+player4 has drawn a 28 from bag 1
+player4's hand is 17, 20, 10, 85, 9, 12, 24, 32, 38, 28
+player4 has discarded a 20 to bag 1
+player4's hand is 17, 10, 85, 9, 12, 24, 32, 38, 28
+player4 has drawn a 63 from bag 1
+player4's hand is 17, 10, 85, 9, 12, 24, 32, 38, 28, 63
+player4 has discarded a 28 to bag 1
+player4's hand is 17, 10, 85, 9, 12, 24, 32, 38, 63
+player4 has drawn a 24 from bag 2
+player4's hand is 17, 10, 85, 9, 12, 24, 32, 38, 63, 24
+player4 has discarded a 63 to bag 2
+player4's hand is 17, 10, 85, 9, 12, 24, 32, 38, 24
+player4 has drawn a 24 from bag 3
+player4's hand is 17, 10, 85, 9, 12, 24, 32, 38, 24, 24
+player4 has discarded a 85 to bag 3
+player4's hand is 17, 10, 9, 12, 24, 32, 38, 24, 24
+player4 has drawn a 4 from bag 3
+player4's hand is 17, 10, 9, 12, 24, 32, 38, 24, 24, 4
+player4 has discarded a 24 to bag 3
+player4's hand is 17, 10, 9, 12, 24, 32, 38, 24, 4
+player4 has drawn a 69 from bag 3
+player4's hand is 17, 10, 9, 12, 24, 32, 38, 24, 4, 69
+player4 has discarded a 17 to bag 3
+player4's hand is 10, 9, 12, 24, 32, 38, 24, 4, 69
+player4 has drawn a 23 from bag 3
+player4's hand is 10, 9, 12, 24, 32, 38, 24, 4, 69, 23
+player4 has discarded a 38 to bag 3
+player4's hand is 10, 9, 12, 24, 32, 24, 4, 69, 23
+player4 has drawn a 88 from bag 2
+player4's hand is 10, 9, 12, 24, 32, 24, 4, 69, 23, 88
+player4 has discarded a 4 to bag 2
+player4's hand is 10, 9, 12, 24, 32, 24, 69, 23, 88
+player4 has drawn a 89 from bag 1
+player4's hand is 10, 9, 12, 24, 32, 24, 69, 23, 88, 89
+player4 has discarded a 24 to bag 1
+player4's hand is 10, 9, 12, 32, 24, 69, 23, 88, 89
+player4 has drawn a 1 from bag 2
+player4's hand is 10, 9, 12, 32, 24, 69, 23, 88, 89, 1
+player4 has discarded a 9 to bag 2
+player4's hand is 10, 12, 32, 24, 69, 23, 88, 89, 1
+player4 has drawn a 26 from bag 3
+player4's hand is 10, 12, 32, 24, 69, 23, 88, 89, 1, 26
+player4 has discarded a 69 to bag 3
+player4's hand is 10, 12, 32, 24, 23, 88, 89, 1, 26
+player4 has drawn a 19 from bag 2
+player4's hand is 10, 12, 32, 24, 23, 88, 89, 1, 26, 19
+player4 has discarded a 12 to bag 2
+player4's hand is 10, 32, 24, 23, 88, 89, 1, 26, 19
+player4 has drawn a 92 from bag 1
+player4's hand is 10, 32, 24, 23, 88, 89, 1, 26, 19, 92
+player4 has discarded a 26 to bag 1
+player4's hand is 10, 32, 24, 23, 88, 89, 1, 19, 92
+player4 has drawn a 16 from bag 3
+player4's hand is 10, 32, 24, 23, 88, 89, 1, 19, 92, 16
+player4 has discarded a 32 to bag 3
+player4's hand is 10, 24, 23, 88, 89, 1, 19, 92, 16
+player4 has drawn a 12 from bag 3
+player4's hand is 10, 24, 23, 88, 89, 1, 19, 92, 16, 12
+player4 has discarded a 19 to bag 3
+player4's hand is 10, 24, 23, 88, 89, 1, 92, 16, 12
+player4 has drawn a 21 from bag 1
+player4's hand is 10, 24, 23, 88, 89, 1, 92, 16, 12, 21
+player4 has discarded a 21 to bag 1
+player4's hand is 10, 24, 23, 88, 89, 1, 92, 16, 12
+player4 has drawn a 73 from bag 2
+player4's hand is 10, 24, 23, 88, 89, 1, 92, 16, 12, 73
+player4 has discarded a 92 to bag 2
+player4's hand is 10, 24, 23, 88, 89, 1, 16, 12, 73
+player4 has drawn a 33 from bag 3
+player4's hand is 10, 24, 23, 88, 89, 1, 16, 12, 73, 33
+player4 has discarded a 33 to bag 3
+player4's hand is 10, 24, 23, 88, 89, 1, 16, 12, 73
+player4 has drawn a 59 from bag 3
+player4's hand is 10, 24, 23, 88, 89, 1, 16, 12, 73, 59
+player4 has discarded a 12 to bag 3
+player4's hand is 10, 24, 23, 88, 89, 1, 16, 73, 59
+player4 has drawn a 59 from bag 2
+player4's hand is 10, 24, 23, 88, 89, 1, 16, 73, 59, 59
+player4 has discarded a 10 to bag 2
+player4's hand is 24, 23, 88, 89, 1, 16, 73, 59, 59
+player4 has drawn a 54 from bag 2
+player4's hand is 24, 23, 88, 89, 1, 16, 73, 59, 59, 54
+player4 has discarded a 1 to bag 2
+player4's hand is 24, 23, 88, 89, 16, 73, 59, 59, 54
+player4 has drawn a 46 from bag 1
+player4's hand is 24, 23, 88, 89, 16, 73, 59, 59, 54, 46
+player4 has discarded a 73 to bag 1
+player4's hand is 24, 23, 88, 89, 16, 59, 59, 54, 46
+player4 has drawn a 83 from bag 3
+player4's hand is 24, 23, 88, 89, 16, 59, 59, 54, 46, 83
+player4 has discarded a 89 to bag 3
+player4's hand is 24, 23, 88, 16, 59, 59, 54, 46, 83
+player4 has drawn a 45 from bag 3
+player4's hand is 24, 23, 88, 16, 59, 59, 54, 46, 83, 45
+player4 has discarded a 59 to bag 3
+player4's hand is 24, 23, 88, 16, 59, 54, 46, 83, 45
+player4 has drawn a 4 from bag 2
+player4's hand is 24, 23, 88, 16, 59, 54, 46, 83, 45, 4
+player4 has discarded a 88 to bag 2
+player4's hand is 24, 23, 16, 59, 54, 46, 83, 45, 4
+player4 has drawn a 38 from bag 2
+player4's hand is 24, 23, 16, 59, 54, 46, 83, 45, 4, 38
+player4 has discarded a 83 to bag 2
+player4's hand is 24, 23, 16, 59, 54, 46, 45, 4, 38
+player4 has drawn a 36 from bag 2
+player4's hand is 24, 23, 16, 59, 54, 46, 45, 4, 38, 36
+player4 has discarded a 24 to bag 2
+player4's hand is 23, 16, 59, 54, 46, 45, 4, 38, 36
+player4 has drawn a 49 from bag 3
+player4's hand is 23, 16, 59, 54, 46, 45, 4, 38, 36, 49
+player4 has discarded a 16 to bag 3
+player4's hand is 23, 59, 54, 46, 45, 4, 38, 36, 49
+player4 has drawn a 52 from bag 2
+player4's hand is 23, 59, 54, 46, 45, 4, 38, 36, 49, 52
+player4 has discarded a 54 to bag 2
+player4's hand is 23, 59, 46, 45, 4, 38, 36, 49, 52
+player4 has drawn a 88 from bag 1
+player4's hand is 23, 59, 46, 45, 4, 38, 36, 49, 52, 88
+player4 has discarded a 49 to bag 1
+player4's hand is 23, 59, 46, 45, 4, 38, 36, 52, 88
+player4 has drawn a 68 from bag 3
+player4's hand is 23, 59, 46, 45, 4, 38, 36, 52, 88, 68
+player4 has discarded a 88 to bag 3
+player4's hand is 23, 59, 46, 45, 4, 38, 36, 52, 68
+player4 has drawn a 63 from bag 2
+player4's hand is 23, 59, 46, 45, 4, 38, 36, 52, 68, 63
+player4 has discarded a 23 to bag 2
+player4's hand is 59, 46, 45, 4, 38, 36, 52, 68, 63
+player4 has drawn a 99 from bag 1
+player4's hand is 59, 46, 45, 4, 38, 36, 52, 68, 63, 99
+player4 has discarded a 99 to bag 1
+player4's hand is 59, 46, 45, 4, 38, 36, 52, 68, 63
+player4 has drawn a 100 from bag 1
+player4's hand is 59, 46, 45, 4, 38, 36, 52, 68, 63, 100
+player4 has discarded a 36 to bag 1
+player4's hand is 59,

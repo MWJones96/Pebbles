@@ -14,7 +14,7 @@ import java.util.concurrent.Executors;
  * and controls the flow of the game.
  * 
  * @date 14/10/15
- * @author Candidate numbers 35092 and 8744
+ * @author 35092 and 8744
  */
 
 public class PebbleGame
@@ -49,12 +49,12 @@ public class PebbleGame
 	
 	public class Player extends Thread
 	{	
-		private ArrayList<Integer> hand;
-		private int bagLastDrawnFrom;
-		private boolean won = false;
+		private ArrayList<Integer> hand; //The current hand of the player
+		private int bagLastDrawnFrom; //The bag this player last drew from
+		private boolean won = false; //Whether this player won the game
 		
-		private String name;
-		private int number;
+		private String name; //Player name; in format 'player n'
+		private int number; //The player number; starts from 0
 		
 		public Player(String name, int number)
 		{
@@ -66,27 +66,22 @@ public class PebbleGame
 		@Override
 		public void run()
 		{
+			//Draws 10 times for each player; puts the thread to sleep so that other threads aren't starved
 			for(int i = 0; i < 10; i++)
 			{
 				draw();
 				try {Thread.sleep(10);} catch (InterruptedException e){}
-			}
+			} 
 			
-			if(getSum() == 100 & won)
+			//Checks if the sum of the hand is 100 AND the game has not finished; this is to prevent more than two players winning
+			if(getSum() == 100 & !isFinished)
 			{
 				won = true;
 				isFinished = true;
 			}
 
 			while(!isFinished)
-			{
-				if(getSum() == 100 & !isFinished)
-				{
-					won = true;
-					isFinished = true;
-					break;
-				}
-				
+			{	
 				discardAndDraw();
 				
 				if(getSum() == 100 & !isFinished)
@@ -100,6 +95,7 @@ public class PebbleGame
 				
 			}
 				
+			//For the one thread that won is set to true, writes to file that this player won
 			if(won)
 			{
 				try {w[number].write(name + " won.");} catch (IOException e1){}
@@ -112,13 +108,21 @@ public class PebbleGame
 			
 		}
 			
+		/**Discards a pebble from the current player's hand
+		 * into the corresponding white bag of the previously-drawn
+		 * pebble. Then proceeds to draw a new pebble from a
+		 * randomly-selected non-empty bag.
+		 * 
+		 * @date 23/10/15
+		 * @author 35092 and 8744
+		 */
+		
 		public synchronized void discardAndDraw()
 		{	
 			assert(hand.size() == 10);
 			
 			if(!isFinished)
 			{	
-				
 				discard();
 				draw();
 			}
@@ -126,10 +130,20 @@ public class PebbleGame
 			assert(hand.size() == 10);
 		}
 		
+		/**Draws a pebble from a randomly-chosen non-empty
+		 * black bag. Proceeds to write the status of the
+		 * player to the appropriate text file.
+		 * 
+		 * @date 23/10/15
+		 * @author 35092 and 8744
+		 */
+		
 		public synchronized void draw()
 		{
+			//Random bag
 			int index = new Random().nextInt(3);
 			
+			//If there's nothing in the bag, then chooses a new one
 			while(bags[index].getBlackBag().getWeights().size() == 0)
 			{
 				index = new Random().nextInt(3);
@@ -144,8 +158,16 @@ public class PebbleGame
 			try {w[number].write(drawStatus);} catch (IOException e){}
 		}
 		
+		/**Discards a pebble to the white bag corresponding to the
+		 * black bag the previous pebble was drawn from
+		 * 
+		 * @date 23/10/15
+		 * @author 35092 and 8744
+		 */
+		
 		private synchronized void discard()
 		{
+			//Puts a pebble back in the white bag corresponding to the black bag last drawn from
 			bags[bagLastDrawnFrom].putPebbleBack(hand);
 			
 			String discardStatus = name + " has discarded a " + bags[bagLastDrawnFrom].getWhiteBag().getWeights().get(bags[bagLastDrawnFrom].getWhiteBag().getWeights().size() - 1) 
@@ -153,6 +175,13 @@ public class PebbleGame
 			
 			try {w[number].write(discardStatus);} catch (IOException e){}
 		}
+		
+		/**Returns the sum of the player's hand.
+		 * 
+		 * @return The sum of the weights in the player's hand
+		 * @date 23/10/15 - 5:03PM
+		 * @author 35092 and 8744
+		 */
 		
 		private int getSum()
 		{
@@ -166,12 +195,29 @@ public class PebbleGame
 			return sum;
 		}
 		
+		/**Sets the attribute bagLastDrawnFrom to the chosen index.
+		 * Used to let the game know what bag was last drawn from
+		 * by this player.
+		 * 
+		 * @param Index to set to
+		 * @date 23/10/15
+		 * @author 35092 and 8744
+		 */
+		
 		public void setBagLastDrawnFrom(int index)
 		{
 			this.bagLastDrawnFrom = index;
 		}
 
 	}
+	
+	/**The main game method. Sets up the thread pool of 
+	 * players and instantiates their output writers.
+	 * Also starts execution of the threads.
+	 * 
+	 * @date 23/10/15
+	 * @author 35092 and 8744
+	 */
 	
 	public void play()
 	{	
@@ -191,9 +237,17 @@ public class PebbleGame
 			s.execute(p[i]);
 		}
 			
+		//Down with the program
 		s.shutdown();
 		
 	}
+	
+	/**Prompts the user for input until a valid number of players
+	 * and three valid csv files are given and then starts the game.
+	 * 
+	 * @date 23/10/15
+	 * @author 35092 and 8744
+	 */
 	
 	public static void main(String[] args)
 	{	
@@ -208,12 +262,11 @@ public class PebbleGame
     	ArrayList<Integer> bag2 = null;
     	ArrayList<Integer> bag3 = null;
 		
-		//Boolean condition that is loops through input until valid input is received
+		//Boolean condition that loops through input until valid values are received
 		boolean canContinue = false;
 			
 		System.out.println("Welcome to Pebble Game!");
 		
-		//Loops through until a valid input is given
 		while(!canContinue) 
 		{
 			try
@@ -230,10 +283,9 @@ public class PebbleGame
 					System.exit(0);
 				}
 				
-            	//Attempts to parse line to an integer
+            	//Attempts to parse line to an integer, throws NumberFormatException: caught below
 				numberOfPlayers = Integer.parseInt(input);
             
-				//Valid input given; can move on
             	canContinue = true;
 			}   
 			//If not integer input then error is display
@@ -261,6 +313,7 @@ public class PebbleGame
 					System.exit(0);
 				}
             	
+				//Returns ArrayList of integers; parsed into bag1
             	bag1 = InputUtil.loadFile(input, numberOfPlayers);
             
             	canContinue = true;
@@ -307,6 +360,7 @@ public class PebbleGame
 					System.exit(0);
 				}
             	
+				//Returns ArrayList of integers; parsed into bag1
             	bag2 = InputUtil.loadFile(input, numberOfPlayers);
             
             	canContinue = true;
@@ -352,6 +406,7 @@ public class PebbleGame
 					System.exit(0);
 				}
             	
+				//Returns ArrayList of integers; parsed into bag1
             	bag3 = InputUtil.loadFile(input, numberOfPlayers);
             
             	canContinue = true;

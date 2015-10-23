@@ -17,7 +17,7 @@ import java.util.List;
 
 public class InputUtil 
 {
-	/* Takes in a csv file as input and returns an array of
+	/**Takes in a csv file as input and returns an array of
 	 * integers that correspond to the weights of the pebbles.
 	 * 
 	 * @date 14/10/15 - 4:58PM
