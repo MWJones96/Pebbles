@@ -17,7 +17,6 @@ import java.util.concurrent.Executors;
  * @author Candidate numbers 35092 and 8744
  */
 
-
 public class PebbleGame
 {
 	private volatile boolean isFinished = false;
@@ -52,7 +51,6 @@ public class PebbleGame
 	{	
 		private ArrayList<Integer> hand;
 		private int bagLastDrawnFrom;
-		private boolean playerTurn = true;
 		private boolean won = false;
 		
 		public Player()
@@ -63,24 +61,69 @@ public class PebbleGame
 		@Override
 		public void run()
 		{
-			synchronized(this)
+			for(int i = 0; i < 10; i++)
+				draw();
+			
+			if(getSum() == 100)
 			{
-				while(!isFinished)
-				{
-					discardAndDraw();
+				won = true;
+				isFinished = true;
+			}
+
+			while(!isFinished)
+			{
+				discardAndDraw();
 					
-					if(getSum() == 100)
-						isFinished = true;
+				if(getSum() == 100)
+				{
+					won = true;
+					isFinished = true;
+					break;
 				}
 			}
+				
+			if(won)
+				System.out.println(Thread.currentThread().getName() + " won.");
 			
 		}
+			
 		
 		public synchronized void discardAndDraw()
 		{
+			ArrayList<Integer> handTemp = hand;
+			
 			assert(hand.size() == 10);
-			discard();
-			draw();
+			
+			if(!isFinished)
+			{	
+				discard();
+				
+				if(isFinished)
+				{
+					hand = handTemp;
+					return;
+				}
+				
+				draw();
+				
+				if(isFinished)
+				{
+					hand = handTemp;
+					return;
+				}
+				
+				System.out.println("player" + Thread.currentThread().getName().charAt(Thread.currentThread().getName().length() - 1)
+						+ " has discarded a " + bags[bagLastDrawnFrom].getWhiteBag().getWeights().get(bags[bagLastDrawnFrom].getWhiteBag().getWeights().size() - 1) 
+						+ " to bag " + (bagLastDrawnFrom + 1) + "\nplayer" +
+						Thread.currentThread().getName().charAt(Thread.currentThread().getName().length() - 1) + "'s hand is " +
+						hand.toString().substring(1, hand.toString().length() - 1));
+				
+				System.out.println("player" + Thread.currentThread().getName().charAt(Thread.currentThread().getName().length() - 1)
+						+ " has drawn a " + hand.get(hand.size() - 1) + " from bag " + (bagLastDrawnFrom + 1) + "\nplayer" +
+						Thread.currentThread().getName().charAt(Thread.currentThread().getName().length() - 1) + "'s hand is " +
+						hand.toString().substring(1, hand.toString().length() - 1));
+				
+			}
 			assert(hand.size() == 10);
 		}
 		
@@ -90,7 +133,6 @@ public class PebbleGame
 			
 			while(bags[index].getBlackBag().getWeights().size() == 0)
 			{
-				bags[index].fillBlackBag();
 				index = new Random().nextInt(3);
 			}
 			
@@ -137,13 +179,11 @@ public class PebbleGame
 			
 			p[i] = new Player();
 			
-			for(int j = 0; j < 10; j++)
-			{
-				p[i].draw();
-			}
-			
 			s.execute(p[i]);
 		}
+		
+		for(int i = 0; i < numOfPlayers; i++)
+			try {w[i].close();} catch (IOException e){}
 		
 	}
 	

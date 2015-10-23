@@ -39,6 +39,10 @@ public class BagPair
 		int temp = b.getWeights().get(index);
 		//Removes the value from the bag
 		b.getWeights().remove(index);
+		
+		if(b.getWeights().size() == 0)
+			fillBlackBag();
+		
 		//Returns the value
 		hand.add(temp);
 	}
