@@ -9,6 +9,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**The main PebbleGame class that handles all of the objects
  * and controls the flow of the game.
@@ -50,7 +51,7 @@ public class PebbleGame
 	public class Player extends Thread
 	{	
 		private ArrayList<Integer> hand; //The current hand of the player
-		private int bagLastDrawnFrom; //The bag this player last drew from
+		private AtomicInteger bagLastDrawnFrom; //The bag this player last drew from
 		private boolean won = false; //Whether this player won the game
 		
 		private String name; //Player name; in format 'player n'
@@ -141,18 +142,18 @@ public class PebbleGame
 		public synchronized void draw()
 		{
 			//Random bag
-			int index = new Random().nextInt(3);
+			AtomicInteger index = new AtomicInteger(new Random().nextInt(3));
 			
 			//If there's nothing in the bag, then chooses a new one
-			while(bags[index].getBlackBag().getWeights().size() == 0)
+			while(bags[index.get()].getBlackBag().getWeights().size() == 0)
 			{
-				index = new Random().nextInt(3);
+				index = new AtomicInteger(new Random().nextInt(3));
 			}
 			
-			bags[index].pickUpPebble(hand);
+			bags[index.get()].pickUpPebble(hand);
 			setBagLastDrawnFrom(index);
 			
-			String drawStatus = name + " has drawn a " + hand.get(hand.size() - 1) + " from bag " + (bagLastDrawnFrom + 1) + 
+			String drawStatus = name + " has drawn a " + hand.get(hand.size() - 1) + " from bag " + (bagLastDrawnFrom.get() + 1) + 
 			"\n" + name + "'s hand is " + hand.toString().substring(1, hand.toString().length() - 1) + "\n";
 			
 			try {w[number].write(drawStatus);} catch (IOException e){}
@@ -168,10 +169,10 @@ public class PebbleGame
 		private synchronized void discard()
 		{
 			//Puts a pebble back in the white bag corresponding to the black bag last drawn from
-			bags[bagLastDrawnFrom].putPebbleBack(hand);
+			bags[bagLastDrawnFrom.get()].putPebbleBack(hand);
 			
-			String discardStatus = name + " has discarded a " + bags[bagLastDrawnFrom].getWhiteBag().getWeights().get(bags[bagLastDrawnFrom].getWhiteBag().getWeights().size() - 1) 
-			+ " to bag " + (bagLastDrawnFrom + 1) + "\n" + name + "'s hand is " +hand.toString().substring(1, hand.toString().length() - 1) + "\n";
+			String discardStatus = name + " has discarded a " + bags[bagLastDrawnFrom.get()].getWhiteBag().getWeights().get(bags[bagLastDrawnFrom.get()].getWhiteBag().getWeights().size() - 1) 
+			+ " to bag " + (bagLastDrawnFrom.get() + 1) + "\n" + name + "'s hand is " +hand.toString().substring(1, hand.toString().length() - 1) + "\n";
 			
 			try {w[number].write(discardStatus);} catch (IOException e){}
 		}
@@ -204,9 +205,9 @@ public class PebbleGame
 		 * @author 35092 and 8744
 		 */
 		
-		public void setBagLastDrawnFrom(int index)
+		public void setBagLastDrawnFrom(AtomicInteger i)
 		{
-			this.bagLastDrawnFrom = index;
+			this.bagLastDrawnFrom = i;
 		}
 
 	}

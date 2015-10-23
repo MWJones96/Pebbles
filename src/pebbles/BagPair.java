@@ -46,7 +46,9 @@ public class BagPair
 		//Stores the value corresponding to the index in a temporary variable
 		int temp = b.getWeights().get(index);
 		//Removes the value from the bag
-		b.getWeights().remove(index);
+		
+		System.out.println(temp);
+		b.getWeights().remove(temp);
 		
 		if(b.getWeights().size() == 0)
 			fillBlackBag();
