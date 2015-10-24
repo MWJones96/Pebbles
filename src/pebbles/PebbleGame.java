@@ -51,7 +51,7 @@ public class PebbleGame
 	public class Player extends Thread
 	{	
 		private ArrayList<Integer> hand; //The current hand of the player
-		private AtomicInteger bagLastDrawnFrom; //The bag this player last drew from
+		private int bagLastDrawnFrom; //The bag this player last drew from
 		private boolean won = false; //Whether this player won the game
 		
 		private String name; //Player name; in format 'player n'
@@ -151,9 +151,9 @@ public class PebbleGame
 			}
 			
 			bags[index.get()].pickUpPebble(hand);
-			setBagLastDrawnFrom(index);
+			setBagLastDrawnFrom(index.get());
 			
-			String drawStatus = name + " has drawn a " + hand.get(hand.size() - 1) + " from bag " + (bagLastDrawnFrom.get() + 1) + 
+			String drawStatus = name + " has drawn a " + hand.get(hand.size() - 1) + " from bag " + (bagLastDrawnFrom + 1) + 
 			"\n" + name + "'s hand is " + hand.toString().substring(1, hand.toString().length() - 1) + "\n";
 			
 			try {w[number].write(drawStatus);} catch (IOException e){}
@@ -169,10 +169,10 @@ public class PebbleGame
 		private synchronized void discard()
 		{
 			//Puts a pebble back in the white bag corresponding to the black bag last drawn from
-			bags[bagLastDrawnFrom.get()].putPebbleBack(hand);
+			bags[bagLastDrawnFrom].putPebbleBack(hand);
 			
-			String discardStatus = name + " has discarded a " + bags[bagLastDrawnFrom.get()].getWhiteBag().getWeights().get(bags[bagLastDrawnFrom.get()].getWhiteBag().getWeights().size() - 1) 
-			+ " to bag " + (bagLastDrawnFrom.get() + 1) + "\n" + name + "'s hand is " +hand.toString().substring(1, hand.toString().length() - 1) + "\n";
+			String discardStatus = name + " has discarded a " + bags[bagLastDrawnFrom].getWhiteBag().getWeights().get(bags[bagLastDrawnFrom].getWhiteBag().getWeights().size() - 1) 
+			+ " to bag " + (bagLastDrawnFrom + 1) + "\n" + name + "'s hand is " +hand.toString().substring(1, hand.toString().length() - 1) + "\n";
 			
 			try {w[number].write(discardStatus);} catch (IOException e){}
 		}
@@ -205,9 +205,9 @@ public class PebbleGame
 		 * @author 35092 and 8744
 		 */
 		
-		public void setBagLastDrawnFrom(AtomicInteger i)
+		public void setBagLastDrawnFrom(int index)
 		{
-			this.bagLastDrawnFrom = i;
+			this.bagLastDrawnFrom = index;
 		}
 
 	}
@@ -217,7 +217,7 @@ public class PebbleGame
 	 * Also starts execution of the threads.
 	 * 
 	 * @date 23/10/15
-	 * @author 35092 and 8744
+	 * @author 35092 and 8744 
 	 */
 	
 	public void play()
@@ -237,10 +237,8 @@ public class PebbleGame
 			
 			s.execute(p[i]);
 		}
-			
-		//Down with the program
-		s.shutdown();
 		
+		s.shutdown();
 	}
 	
 	/**Prompts the user for input until a valid number of players
@@ -253,7 +251,8 @@ public class PebbleGame
 	public static void main(String[] args)
 	{	
 		//Create a scanner so we can read the command-line input
-    	Scanner scanner = new Scanner(System.in);
+    	@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
     	
     	//Integer that stores the number of players
     	int numberOfPlayers = 0;

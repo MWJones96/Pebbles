@@ -1,0 +1,45 @@
+player1 has drawn a 9 from bag 1
+player1's hand is 9
+player1 has drawn a 10 from bag 1
+player1's hand is 9, 10
+player1 has drawn a 10 from bag 1
+player1's hand is 9, 10, 10
+player1 has drawn a 10 from bag 2
+player1's hand is 9, 10, 10, 10
+player1 has drawn a 10 from bag 1
+player1's hand is 9, 10, 10, 10, 10
+player1 has drawn a 10 from bag 2
+player1's hand is 9, 10, 10, 10, 10, 10
+player1 has drawn a 10 from bag 2
+player1's hand is 9, 10, 10, 10, 10, 10, 10
+player1 has drawn a 10 from bag 2
+player1's hand is 9, 10, 10, 10, 10, 10, 10, 10
+player1 has drawn a 10 from bag 2
+player1's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player1 has drawn a 10 from bag 1
+player1's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player1 has discarded a 10 to bag 1
+player1's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player1 has drawn a 10 from bag 1
+player1's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player1 has discarded a 9 to bag 1
+player1's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player1 has drawn a 10 from bag 2
+player1's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player1 has discarded a 10 to bag 2
+player1's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player1 has drawn a 10 from bag 1
+player1's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player1 has discarded a 10 to bag 1
+player1's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player1 has drawn a 9 from bag 2
+player1's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 9
+player1 has discarded a 9 to bag 2
+player1's hand is 10, 10, 10, 10, 10, 10, 10, 10, 9
+player1 has drawn a 10 from bag 2
+player1's hand is 10, 10, 10, 10, 10, 10, 10, 10, 9, 10
+player1 has discarded a 9 to bag 2
+player1's hand is 10, 10, 10, 10, 10, 10, 10, 10, 10
+player1 has drawn a 10 from bag 1
+player1's hand is 10, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player1 won.

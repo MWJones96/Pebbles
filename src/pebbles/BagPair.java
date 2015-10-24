@@ -37,23 +37,24 @@ public class BagPair
 	 * its value.
 	 * 
 	 * @param hand The hand of the player to give the pebble to
+	 * @return 
 	 */
 	
-	public void pickUpPebble(ArrayList<Integer> hand)
+	public synchronized void pickUpPebble(ArrayList<Integer> hand)
 	{
 		//Gets a random index in the black bag
 		int index = new Random().nextInt(b.getWeights().size());
 		//Stores the value corresponding to the index in a temporary variable
 		int temp = b.getWeights().get(index);
+		
 		//Removes the value from the bag
+		b.getWeights().remove(index);
 		
-		System.out.println(temp);
-		b.getWeights().remove(temp);
-		
+		//If the Black Bag becomes empty, then refills it from the White Bag
 		if(b.getWeights().size() == 0)
 			fillBlackBag();
 		
-		//Returns the value
+		//Adds the value to the hand
 		hand.add(temp);
 	}
 	
@@ -63,7 +64,7 @@ public class BagPair
 	 * @param The array of weights in the player's hand
 	 */
 	
-	public void putPebbleBack(ArrayList<Integer> hand)
+	public synchronized void putPebbleBack(ArrayList<Integer> hand)
 	{
 		assert(hand.size() == 10);
 		//Gets a random pebble index from the player's hand
@@ -77,7 +78,7 @@ public class BagPair
 	 * bag.
 	 */
 	
-	public void fillBlackBag()
+	public synchronized void fillBlackBag()
 	{
 		b.getWeights().addAll(w.getWeights());
 		w.getWeights().clear();
