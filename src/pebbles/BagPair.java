@@ -43,6 +43,11 @@ public class BagPair
 	
 	public synchronized void pickUpPebble(ArrayList<Integer> hand)
 	{
+		if(b.getWeights().size() == 0)
+		{
+			this.fillBlackBag();
+		}
+		
 		//Gets a random index in the black bag
 		int index = new Random().nextInt(b.getWeights().size());
 		//Stores the value corresponding to the index in a temporary variable
@@ -50,11 +55,6 @@ public class BagPair
 		
 		//Removes the value from the bag
 		b.getWeights().remove(index);
-		
-		if(b.getWeights().size() == 0)
-		{
-			this.fillBlackBag();
-		}
 	}
 	
 	/**Picks a random pebble from the player's hand and
