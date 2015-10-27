@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public abstract class Bag
 {
-	private volatile ArrayList<Integer> weights;
+	private volatile ArrayList<Integer> weights; //Volatile in order to make read and writes Atomic
 	
 	public Bag(ArrayList<Integer> weights)
 	{

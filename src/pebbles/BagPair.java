@@ -13,12 +13,14 @@ import java.util.Random;
 
 public class BagPair 
 {
-	private volatile BlackBag b;
+	private volatile BlackBag b; //Volatile to make read and writes Atomic
 	private volatile WhiteBag w;
 	
 	public BagPair(ArrayList<Integer> bag)
 	{
+		//Fills Black Bag with contents
 		b = new BlackBag(bag);
+		//White Bag initialised as empty
 		w = new WhiteBag(new ArrayList<Integer>());
 	}
 	
@@ -39,7 +41,7 @@ public class BagPair
 	 * @param hand The hand of the player to give the pebble to
 	 */
 	
-	public void pickUpPebble(ArrayList<Integer> hand)
+	public synchronized void pickUpPebble(ArrayList<Integer> hand)
 	{
 		//Gets a random index in the black bag
 		int index = new Random().nextInt(b.getWeights().size());
@@ -61,7 +63,7 @@ public class BagPair
 	 * @param The array of weights in the player's hand
 	 */
 	
-	public void putPebbleBack(ArrayList<Integer> hand)
+	public synchronized void putPebbleBack(ArrayList<Integer> hand)
 	{
 		assert(hand.size() == 10);
 		//Gets a random pebble index from the player's hand
@@ -75,7 +77,7 @@ public class BagPair
 	 * bag.
 	 */
 	
-	public void fillBlackBag()
+	public synchronized void fillBlackBag()
 	{
 		b.getWeights().addAll(w.getWeights());
 		w.getWeights().clear();

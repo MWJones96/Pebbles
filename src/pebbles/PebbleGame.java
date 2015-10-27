@@ -9,7 +9,6 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**The main PebbleGame class that handles all of the objects
  * and controls the flow of the game.
@@ -20,13 +19,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class PebbleGame
 {
-	private volatile boolean isFinished = false;
+	private volatile boolean isFinished = false; //Has the game finished?
 	
 	private int numOfPlayers;
-	private Player[] p;
-	private volatile BagPair[] bags;
+	private Player[] p; //Thread array of Players
+	private volatile BagPair[] bags = new BagPair[3]; //Array of Bag Pairs; fixed size of 3
 	
-	private BufferedWriter[] w;
+	private BufferedWriter[] w; //BufferedWriter array to write to a file for each player
 	
 	public PebbleGame(int numOfPlayers, ArrayList<Integer> bag1, ArrayList<Integer> bag2, ArrayList<Integer> bag3)
 	{
@@ -35,10 +34,9 @@ public class PebbleGame
 		
 		this.p = new Player[numOfPlayers];
 		
-		this.bags = new BagPair[3];
-		this.bags[0] = new BagPair(bag1);
-		this.bags[1] = new BagPair(bag2);
-		this.bags[2] = new BagPair(bag3);
+		this.bags[0] = new BagPair(bag1); //Fills the Black Bag of the pair with the contents of bag1
+		this.bags[1] = new BagPair(bag2); //Fills the Black Bag of the pair with the contents of bag2
+		this.bags[2] = new BagPair(bag3); //Fills the Black Bag of the pair with the contents of bag3
 	}
 	
 	/**Nested class that controls the players of PebbleGame.
@@ -82,6 +80,7 @@ public class PebbleGame
 				isFinished = true;
 			}
 
+			//While the game has not finished, all players continue drawing
 			while(!isFinished)
 			{	
 				if(!isFinished)
@@ -94,8 +93,8 @@ public class PebbleGame
 					break;
 				}
 				
+				//Prevents greedy and starved threads
 				try {Thread.sleep(10);} catch (InterruptedException e){}
-				
 			}
 				
 			//For the one thread that won is set to true, writes to file that this player won
@@ -116,9 +115,6 @@ public class PebbleGame
 		 * into the corresponding white bag of the previously-drawn
 		 * pebble. Then proceeds to draw a new pebble from a
 		 * randomly-selected non-empty bag.
-		 * 
-		 * @date 23/10/15
-		 * @author 35092 and 8744
 		 */
 		
 		public synchronized void discardAndDraw()
@@ -137,9 +133,6 @@ public class PebbleGame
 		/**Draws a pebble from a randomly-chosen non-empty
 		 * black bag. Proceeds to write the status of the
 		 * player to the appropriate text file.
-		 * 
-		 * @date 23/10/15
-		 * @author 35092 and 8744
 		 */
 		
 		public synchronized void draw()
@@ -168,9 +161,6 @@ public class PebbleGame
 		/**Discards a pebble to the corresponding
 		 * white bag of the black bag that was
 		 * previously drawn from.
-		 * 
-		 * @date 23/10/15
-		 * @author 35092 and 8744
 		 */
 		
 		public synchronized void discard()
@@ -188,9 +178,7 @@ public class PebbleGame
 
 		/**Returns the sum of the player's hand.
 		 * 
-		 * @return The sum of the weights in the player's hand
-		 * @date 23/10/15 - 5:03PM
-		 * @author 35092 and 8744
+		 * @return sum - The sum of the weights in the player's hand
 		 */
 		
 		private int getSum()
@@ -209,9 +197,7 @@ public class PebbleGame
 		 * Used to let the game know what bag was last drawn from
 		 * by this player.
 		 * 
-		 * @param Index to set to
-		 * @date 23/10/15
-		 * @author 35092 and 8744
+		 * @param index - Index to set to
 		 */
 		
 		public void setBagLastDrawnFrom(int index)
@@ -224,9 +210,6 @@ public class PebbleGame
 	/**The main game method. Sets up the thread pool of 
 	 * players and instantiates their output writers.
 	 * Also starts execution of the threads.
-	 * 
-	 * @date 23/10/15
-	 * @author 35092 and 8744 
 	 */
 	
 	public void play()
@@ -256,9 +239,6 @@ public class PebbleGame
 	
 	/**Prompts the user for input until a valid number of players
 	 * and three valid csv files are given and then starts the game.
-	 * 
-	 * @date 23/10/15
-	 * @author 35092 and 8744
 	 */
 	
 	public static void main(String[] args)
@@ -298,13 +278,17 @@ public class PebbleGame
 				
             	//Attempts to parse line to an integer, throws NumberFormatException: caught below
 				numberOfPlayers = Integer.parseInt(input);
+				
+				//The program can't deal with a negative number of players
+				if(numberOfPlayers <= 0)
+					throw new NumberFormatException();
             
             	canContinue = true;
 			}   
 			//If not integer input then error is display
 			catch(NumberFormatException e) 
 			{
-				System.out.println("Only integers accepted. Please try again.");
+				System.out.println("Only positive integers accepted. Please try again.");
 			}
 		
 		}

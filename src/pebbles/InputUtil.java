@@ -20,8 +20,9 @@ public class InputUtil
 	/**Takes in a csv file as input and returns an array of
 	 * integers that correspond to the weights of the pebbles.
 	 * 
-	 * @date 14/10/15 - 4:58PM
-	 * @author 35092 and 8744
+	 * @param filename - The path of the file to load
+	 * @param numberOfPlayers - The number of players in the game, to check if there are enough pebbles
+	 * @return values - The ArrayList of Integers representing the weights of the pebbles
 	 */
 	
 	public static ArrayList<Integer> loadFile(String filename, int numberOfPlayers) throws IOException, NegativePebbleWeightException, InsufficientNumberOfPebblesException
