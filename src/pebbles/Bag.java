@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public abstract class Bag
 {
-	private ArrayList<Integer> weights;
+	private volatile ArrayList<Integer> weights;
 	
 	public Bag(ArrayList<Integer> weights)
 	{

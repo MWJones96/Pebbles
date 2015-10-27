@@ -1,40 +1,137 @@
-player3 has drawn a 9 from bag 1
-player3's hand is 9
 player3 has drawn a 10 from bag 3
-player3's hand is 9, 10
+player3's hand is 10
+player3 has drawn a 10 from bag 2
+player3's hand is 10, 10
 player3 has drawn a 10 from bag 1
-player3's hand is 9, 10, 10
-player3 has drawn a 9 from bag 1
-player3's hand is 9, 10, 10, 9
+player3's hand is 10, 10, 10
 player3 has drawn a 10 from bag 2
-player3's hand is 9, 10, 10, 9, 10
+player3's hand is 10, 10, 10, 10
+player3 has drawn a 10 from bag 2
+player3's hand is 10, 10, 10, 10, 10
 player3 has drawn a 9 from bag 3
-player3's hand is 9, 10, 10, 9, 10, 9
-player3 has drawn a 9 from bag 3
-player3's hand is 9, 10, 10, 9, 10, 9, 9
+player3's hand is 10, 10, 10, 10, 10, 9
 player3 has drawn a 10 from bag 3
-player3's hand is 9, 10, 10, 9, 10, 9, 9, 10
-player3 has drawn a 9 from bag 1
-player3's hand is 9, 10, 10, 9, 10, 9, 9, 10, 9
+player3's hand is 10, 10, 10, 10, 10, 9, 10
+player3 has drawn a 10 from bag 3
+player3's hand is 10, 10, 10, 10, 10, 9, 10, 10
 player3 has drawn a 10 from bag 2
-player3's hand is 9, 10, 10, 9, 10, 9, 9, 10, 9, 10
+player3's hand is 10, 10, 10, 10, 10, 9, 10, 10, 10
+player3 has drawn a 9 from bag 3
+player3's hand is 10, 10, 10, 10, 10, 9, 10, 10, 10, 9
+player3 has discarded a 10 to bag 3
+player3's hand is 10, 10, 10, 10, 9, 10, 10, 10, 9
+player3 has drawn a 10 from bag 2
+player3's hand is 10, 10, 10, 10, 9, 10, 10, 10, 9, 10
+player3 has discarded a 10 to bag 2
+player3's hand is 10, 10, 10, 10, 9, 10, 10, 9, 10
+player3 has drawn a 9 from bag 2
+player3's hand is 10, 10, 10, 10, 9, 10, 10, 9, 10, 9
+player3 has discarded a 10 to bag 2
+player3's hand is 10, 10, 10, 10, 9, 10, 9, 10, 9
+player3 has drawn a 10 from bag 3
+player3's hand is 10, 10, 10, 10, 9, 10, 9, 10, 9, 10
+player3 has discarded a 9 to bag 3
+player3's hand is 10, 10, 10, 10, 10, 9, 10, 9, 10
+player3 has drawn a 9 from bag 2
+player3's hand is 10, 10, 10, 10, 10, 9, 10, 9, 10, 9
+player3 has discarded a 10 to bag 2
+player3's hand is 10, 10, 10, 10, 9, 10, 9, 10, 9
+player3 has drawn a 10 from bag 3
+player3's hand is 10, 10, 10, 10, 9, 10, 9, 10, 9, 10
+player3 has discarded a 10 to bag 3
+player3's hand is 10, 10, 10, 9, 10, 9, 10, 9, 10
+player3 has drawn a 10 from bag 2
+player3's hand is 10, 10, 10, 9, 10, 9, 10, 9, 10, 10
 player3 has discarded a 9 to bag 2
-player3's hand is 9, 10, 10, 10, 9, 9, 10, 9, 10
+player3's hand is 10, 10, 10, 10, 9, 10, 9, 10, 10
 player3 has drawn a 10 from bag 1
-player3's hand is 9, 10, 10, 10, 9, 9, 10, 9, 10, 10
+player3's hand is 10, 10, 10, 10, 9, 10, 9, 10, 10, 10
 player3 has discarded a 10 to bag 1
-player3's hand is 9, 10, 10, 9, 9, 10, 9, 10, 10
+player3's hand is 10, 10, 10, 9, 10, 9, 10, 10, 10
 player3 has drawn a 10 from bag 1
-player3's hand is 9, 10, 10, 9, 9, 10, 9, 10, 10, 10
+player3's hand is 10, 10, 10, 9, 10, 9, 10, 10, 10, 10
 player3 has discarded a 10 to bag 1
-player3's hand is 9, 10, 10, 9, 9, 10, 9, 10, 10
+player3's hand is 10, 10, 10, 9, 10, 9, 10, 10, 10
 player3 has drawn a 10 from bag 2
-player3's hand is 9, 10, 10, 9, 9, 10, 9, 10, 10, 10
+player3's hand is 10, 10, 10, 9, 10, 9, 10, 10, 10, 10
 player3 has discarded a 10 to bag 2
-player3's hand is 9, 10, 10, 9, 9, 10, 9, 10, 10
+player3's hand is 10, 10, 9, 10, 9, 10, 10, 10, 10
 player3 has drawn a 10 from bag 2
-player3's hand is 9, 10, 10, 9, 9, 10, 9, 10, 10, 10
+player3's hand is 10, 10, 9, 10, 9, 10, 10, 10, 10, 10
 player3 has discarded a 10 to bag 2
-player3's hand is 9, 10, 9, 9, 10, 9, 10, 10, 10
+player3's hand is 10, 10, 9, 9, 10, 10, 10, 10, 10
 player3 has drawn a 10 from bag 3
-player3's hand is 9, 10, 9, 9, 10, 9, 10, 10, 10, 10
+player3's hand is 10, 10, 9, 9, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 3
+player3's hand is 10, 10, 9, 9, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 3
+player3's hand is 10, 10, 9, 9, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 3
+player3's hand is 10, 10, 9, 9, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 1
+player3's hand is 10, 10, 9, 9, 10, 10, 10, 10, 10, 10
+player3 has discarded a 9 to bag 1
+player3's hand is 10, 10, 9, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 3
+player3's hand is 10, 10, 9, 10, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 3
+player3's hand is 10, 9, 10, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 1
+player3's hand is 10, 9, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 1
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 3
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 3
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 2
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 2
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 1
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 1
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 3
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 3
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 1
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 1
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 1
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 1
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 3
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 3
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 1
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 1
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 1
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 1
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 2
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 2
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 1
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 1
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 1
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has discarded a 10 to bag 1
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 2
+player3's hand is 9, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has discarded a 9 to bag 2
+player3's hand is 10, 10, 10, 10, 10, 10, 10, 10, 10
+player3 has drawn a 10 from bag 2
+player3's hand is 10, 10, 10, 10, 10, 10, 10, 10, 10, 10
+player3 won.

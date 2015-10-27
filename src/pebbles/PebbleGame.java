@@ -24,7 +24,7 @@ public class PebbleGame
 	
 	private int numOfPlayers;
 	private Player[] p;
-	private BagPair[] bags;
+	private volatile BagPair[] bags;
 	
 	private BufferedWriter[] w;
 	
@@ -71,6 +71,7 @@ public class PebbleGame
 			for(int i = 0; i < 10; i++)
 			{
 				draw();
+				//Sleep so that other threads don't become starved
 				try {Thread.sleep(10);} catch (InterruptedException e){}
 			} 
 			
@@ -83,7 +84,8 @@ public class PebbleGame
 
 			while(!isFinished)
 			{	
-				discardAndDraw();
+				if(!isFinished)
+					discardAndDraw();
 				
 				if(getSum() == 100 & !isFinished)
 				{
@@ -103,6 +105,7 @@ public class PebbleGame
 				
 				System.out.println("Game is over. Exiting...");
 				
+				//Closes all BufferedWriters
 				for(int i = 0; i < numOfPlayers; i++)
 					try {w[i].close();} catch (IOException e){}
 			}
@@ -142,41 +145,47 @@ public class PebbleGame
 		public synchronized void draw()
 		{
 			//Random bag
-			AtomicInteger index = new AtomicInteger(new Random().nextInt(3));
+			int index = new Random().nextInt(3);
 			
 			//If there's nothing in the bag, then chooses a new one
-			while(bags[index.get()].getBlackBag().getWeights().size() == 0)
+			while(bags[index].getBlackBag().getWeights().size() == 0)
 			{
-				index = new AtomicInteger(new Random().nextInt(3));
+				bags[index].fillBlackBag();
+				index = new Random().nextInt(3);
 			}
 			
-			bags[index.get()].pickUpPebble(hand);
-			setBagLastDrawnFrom(index.get());
+			bags[index].pickUpPebble(hand);
+			setBagLastDrawnFrom(index);
 			
-			String drawStatus = name + " has drawn a " + hand.get(hand.size() - 1) + " from bag " + (bagLastDrawnFrom + 1) + 
+			String drawStatus = name + " has drawn a " + hand.get(hand.size() - 1) + " from bag " + "B" + (bagLastDrawnFrom + 1) + 
 			"\n" + name + "'s hand is " + hand.toString().substring(1, hand.toString().length() - 1) + "\n";
+			
+			System.out.println(drawStatus);
 			
 			try {w[number].write(drawStatus);} catch (IOException e){}
 		}
 		
-		/**Discards a pebble to the white bag corresponding to the
-		 * black bag the previous pebble was drawn from
+		/**Discards a pebble to the corresponding
+		 * white bag of the black bag that was
+		 * previously drawn from.
 		 * 
 		 * @date 23/10/15
 		 * @author 35092 and 8744
 		 */
 		
-		private synchronized void discard()
+		public synchronized void discard()
 		{
 			//Puts a pebble back in the white bag corresponding to the black bag last drawn from
 			bags[bagLastDrawnFrom].putPebbleBack(hand);
 			
 			String discardStatus = name + " has discarded a " + bags[bagLastDrawnFrom].getWhiteBag().getWeights().get(bags[bagLastDrawnFrom].getWhiteBag().getWeights().size() - 1) 
-			+ " to bag " + (bagLastDrawnFrom + 1) + "\n" + name + "'s hand is " +hand.toString().substring(1, hand.toString().length() - 1) + "\n";
+			+ " to bag " + "W" + (bagLastDrawnFrom + 1) + "\n" + name + "'s hand is " +hand.toString().substring(1, hand.toString().length() - 1) + "\n";
+			
+			System.out.println(discardStatus);
 			
 			try {w[number].write(discardStatus);} catch (IOException e){}
 		}
-		
+
 		/**Returns the sum of the player's hand.
 		 * 
 		 * @return The sum of the weights in the player's hand
@@ -234,10 +243,14 @@ public class PebbleGame
 			catch (IOException e){}
 			
 			p[i] = new Player("player" + (i + 1), i);
-			
 			s.execute(p[i]);
 		}
+
+		//Waits for all threads to finish
+		for(Player player : p)
+			try {player.join();} catch (InterruptedException e){}
 		
+		//Down with the program
 		s.shutdown();
 	}
 	

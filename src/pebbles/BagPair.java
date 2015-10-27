@@ -13,8 +13,8 @@ import java.util.Random;
 
 public class BagPair 
 {
-	private BlackBag b;
-	private WhiteBag w;
+	private volatile BlackBag b;
+	private volatile WhiteBag w;
 	
 	public BagPair(ArrayList<Integer> bag)
 	{
@@ -37,25 +37,22 @@ public class BagPair
 	 * its value.
 	 * 
 	 * @param hand The hand of the player to give the pebble to
-	 * @return 
 	 */
 	
-	public synchronized void pickUpPebble(ArrayList<Integer> hand)
+	public void pickUpPebble(ArrayList<Integer> hand)
 	{
 		//Gets a random index in the black bag
 		int index = new Random().nextInt(b.getWeights().size());
 		//Stores the value corresponding to the index in a temporary variable
-		int temp = b.getWeights().get(index);
+		hand.add(b.getWeights().get(index));
 		
 		//Removes the value from the bag
 		b.getWeights().remove(index);
 		
-		//If the Black Bag becomes empty, then refills it from the White Bag
 		if(b.getWeights().size() == 0)
-			fillBlackBag();
-		
-		//Adds the value to the hand
-		hand.add(temp);
+		{
+			this.fillBlackBag();
+		}
 	}
 	
 	/**Picks a random pebble from the player's hand and
@@ -64,7 +61,7 @@ public class BagPair
 	 * @param The array of weights in the player's hand
 	 */
 	
-	public synchronized void putPebbleBack(ArrayList<Integer> hand)
+	public void putPebbleBack(ArrayList<Integer> hand)
 	{
 		assert(hand.size() == 10);
 		//Gets a random pebble index from the player's hand
@@ -78,7 +75,7 @@ public class BagPair
 	 * bag.
 	 */
 	
-	public synchronized void fillBlackBag()
+	public void fillBlackBag()
 	{
 		b.getWeights().addAll(w.getWeights());
 		w.getWeights().clear();
